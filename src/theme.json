@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version":2,
+"settings": {
+	"color": {
+		"palette": [
+			{
+				"slug": "orange",
+				"color": "#ff8200",
+				"name": "Orange"
+			},
+			{
+				"slug": "smokey",
+				"color": "#4b4b4b",
+				"name": "Web Smokey"
+			},
+			{
+				"slug": "light",
+				"color": "#f6f6f6",
+				"name": "Light"
+			},
+			{
+				"slug": "gray2",
+				"color": "#e0e0e0",
+				"name": "Gray 2"
+			},
+			{
+				"slug": "white",
+				"color": "#fffff",
+				"name": "White"
+			}
+		]
+	}
+}
+}
