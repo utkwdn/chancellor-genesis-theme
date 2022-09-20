@@ -4,11 +4,10 @@
 .nav-links {
   @extend .pagination;
 }
-.nav-previous, .nav-next {
+.nav-previous,
+.nav-next {
   @extend .page-item;
   a {
-  @extend .page-link;
+    @extend .page-link;
   }
 }
-
-

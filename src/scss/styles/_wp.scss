@@ -2,22 +2,22 @@
 // Note: Do this sparingly, and ONLY if necessary. Our goal should be to make the theme output HTML that is compatible with the framework.
 
 .alignright {
-	float: right;
-	margin-left: $spacer;
-	margin-bottom: $spacer;
-	&.framed {
-	  margin-left: $spacer * 2;
-	  margin-bottom: $spacer * 2;
-	}
+  float: right;
+  margin-left: $spacer;
+  margin-bottom: $spacer;
+  &.framed {
+    margin-left: $spacer * 2;
+    margin-bottom: $spacer * 2;
+  }
 }
 .alignleft {
-	float: left;
-	margin-right: $spacer;
-	margin-bottom: $spacer;
-	&.framed {
-	  margin-right: $spacer * 2;
-	  margin-bottom: $spacer * 2;
-	}
+  float: left;
+  margin-right: $spacer;
+  margin-bottom: $spacer;
+  &.framed {
+    margin-right: $spacer * 2;
+    margin-bottom: $spacer * 2;
+  }
 }
 .aligncenter img {
   display: block;
@@ -34,11 +34,10 @@
 //  @extend .d-flex;
 //}
 
-
 .wp-has-aspect-ratio .wp-block-embed__wrapper {
   @extend .ratio;
 }
-.wp-embed-aspect-1-1  .wp-block-embed__wrapper {
+.wp-embed-aspect-1-1 .wp-block-embed__wrapper {
   @extend .ratio-1x1;
 }
 .wp-embed-aspect-4-3 .wp-block-embed__wrapper {

@@ -85,7 +85,7 @@
     .framed {
       &::before {
         position: absolute;
-        content: " ";
+        content: ' ';
         width: 60%;
         height: calc(100% - 2rem);
         // bottom: -$container-padding-x;
@@ -137,7 +137,7 @@
   width: auto;
   &::before {
     position: absolute;
-    content: " ";
+    content: ' ';
     width: 60%;
     height: calc(100% - 2rem);
     bottom: -$container-padding-x;
@@ -206,9 +206,9 @@
 // Orange Accent : inset border
 
 .image-oa-inset img {
-	/* inset border inside of images */
- outline: $border-width solid $utorange;
- outline-offset: calc(-1 * ($spacer / 2));
+  /* inset border inside of images */
+  outline: $border-width solid $utorange;
+  outline-offset: calc(-1 * ($spacer / 2));
 }
 
 /*
