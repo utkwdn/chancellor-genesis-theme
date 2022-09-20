@@ -32,7 +32,9 @@ gulp.task('sass', function () {
 gulp.task('scripts', function () {
    return gulp.src (
          [
-         './src/js/utk.js']
+        './node_modules/bootstrap/dist/js/bootstrap.min.js',
+        './src/js/utk.js'
+      ]
  		)
 		.pipe(concat('utk.js'))
 		.pipe(uglify())

@@ -1,10 +1,15 @@
 <?php
-
+if ( ! defined( 'UTKCHANCELLOR_VERSION' ) ) {
+	// Replace the version number of the theme on each release.
+	define( 'UTKCHANCELLOR_VERSION', '0.1.2' );
+}
 
  // Get the stylesheet
  function mychildtheme_enqueue_styles() {
-	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
- }
+	wp_enqueue_style( 'utkchancellor-style', get_template_directory_uri() . '/style.css', array(), UTKCHANCELLOR_VERSION, true );
+	wp_enqueue_script( 'utkchancellor-bootstrap',  'https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js', array(), UTKCHANCELLOR_VERSION, true ); 
+	wp_enqueue_script( 'utkchancellor-script', get_stylesheet_directory_uri() . '/js/utk.js', array(), UTKCHANCELLOR_VERSION, true ); 
+}
  add_action( 'wp_enqueue_scripts', 'mychildtheme_enqueue_styles' );
 
 
@@ -28,7 +33,7 @@ function utkchancellor_register_block_pattern_categories() {
 
 	$block_pattern_categories = array(
 		'utkchancellor-general' => array(
-			'label'         => __( 'General', 'utkchancellor' ),
+			'label'         => __( 'Chancellor', 'utkchancellor' ),
 			'categoryTypes' => array( 'utkchancellor' ),
 		),
 	);
