@@ -4,6 +4,9 @@ if ( ! defined( 'UTKCHANCELLOR_VERSION' ) ) {
 	define( 'UTKCHANCELLOR_VERSION', '0.1.2' );
 }
 
+include_once( get_template_directory() . '/lib/init.php' );
+
+
  // Get the stylesheet
  function mychildtheme_enqueue_styles() {
 	wp_enqueue_style( 'utkchancellor-style', get_template_directory_uri() . '/style.css', array(), UTKCHANCELLOR_VERSION, true );
