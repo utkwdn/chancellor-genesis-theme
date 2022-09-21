@@ -104,5 +104,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', gulp.series('sass', 'scripts', 'buildsrc', 'watch'));
-gulp.task('build', gulp.series('sass', 'scripts', 'buildsrc', 'watch'));
+gulp.task('build', gulp.series('sass', 'scripts', 'buildsrc'));
 gulp.task('dist', gulp.series('distcss', 'distjs', 'distsrc'));
