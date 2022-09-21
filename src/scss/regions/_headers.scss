@@ -1,7 +1,18 @@
 //#masthead {
 //  border-top: 0.25rem solid $utorange;
 //  }
-
+.site-title {
+  font-size: $font-size-lg;
+  display: flex;
+  margin: 0.25 *  $spacer;
+  a {
+    background-size: $spacer*2 $spacer*2 !important;
+    color: $utsmokey;
+    padding:  $spacer 0  $spacer  $spacer*4;
+    text-decoration: none;
+    font-weight: $font-weight-bolder;
+  }
+}
 #utk_powert {
   height: $spacer * 2;
   width: $spacer * 2;
@@ -10,10 +21,6 @@
 #utk_logo_footer {
   width: 190px;
   height: 42px;
-}
-
-.site-title {
-  font-size: $font-size-base;
 }
 h1.site-title {
   margin-top: 0;
