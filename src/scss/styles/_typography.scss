@@ -54,12 +54,12 @@ h1,
 }
 
 h1 {
-  margin-top: calc($spacer * 6);
+  // margin-top: calc($spacer * 6);
   margin-bottom: calc($spacer * 2);
-  font-weight: 900; // think it needs to be heavier like this here
+  text-transform: uppercase;
 }
 h2 {
-  margin-top: calc($spacer * 5);
+  margin-top: calc($spacer * 3.2);
   margin-bottom: calc($spacer * 2.2);
 }
 
@@ -105,4 +105,7 @@ h2.heading-oa-bar {
   width: auto;
   position: relative;
   width: fit-content;
+}
+.lead strong {
+  font-weight: $font-weight-bold;
 }

@@ -3,14 +3,36 @@
   "version": 2,
   "settings": {
     "blocks": {
+      "core/navigation": {
+        "elements": {
+          "link": {
+            "typography": {
+              "text-decoration": "underline"
+            }
+          }
+        }
+      },
       "core/button": {
         "color": {
           "background": "var(--wp--preset--color--smokey)",
           "text": "var(--wp--preset--color--white)"
         }
+      },
+      "core/heading": {
+        "color": {
+          "palette": [
+            {
+              "slug": "smokeyX",
+              "color": "#333333",
+              "name": "Web SmokeyX"
+            }
+          ]
+        }
       }
     },
     "color": {
+      "custom": false,
+      "defaultPalette": false,
       "palette": [
         {
           "slug": "orange",
@@ -21,6 +43,11 @@
           "slug": "smokey",
           "color": "#4b4b4b",
           "name": "Web Smokey"
+        },
+        {
+          "slug": "smokeyX",
+          "color": "#333333",
+          "name": "Web SmokeyX"
         },
         {
           "slug": "light",
@@ -40,8 +67,8 @@
       ]
     },
     "layout": {
-      "contentSize": "800px",
-      "wideSize": "1000px"
+      "contentSize": "900px",
+      "wideSize": "80vw"
     },
     "typography": {
       "fontFamilies": [
@@ -59,8 +86,14 @@
         "color": {
           "background": "var(--wp--preset--color--smokey)",
           "text": "var(--wp--preset--color--white)"
+        },
+        "border": {
+          "radius": ".45rem",
+          "width": ".2rem",
+          "color": "var(--wp--preset--color--orange)"
         }
-      }
+      },
+      "core/cover": {}
     },
     "typography": {
       "fontFamily": "var(--wp--preset--font-family--helvetica-arial)",

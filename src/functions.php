@@ -4,6 +4,11 @@ if ( ! defined( 'UTKCHANCELLOR_VERSION' ) ) {
 	define( 'UTKCHANCELLOR_VERSION', '0.1.2' );
 }
 
+// Add full-width to blocks – this is now added in the theme.json as "layout" and is not needed here
+// function setup_theme() {
+// 	add_theme_support( 'align-wide' );
+//   }
+
  // Get the stylesheet
  function mychildtheme_enqueue_styles() {
 	wp_enqueue_style( 'utkchancellor-style', get_template_directory_uri() . '/style.css', array(), UTKCHANCELLOR_VERSION, true );
