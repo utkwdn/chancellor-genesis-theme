@@ -8,6 +8,8 @@ if ( ! defined( 'UTKCHANCELLOR_VERSION' ) ) {
 // function setup_theme() {
 // 	add_theme_support( 'align-wide' );
 //   }
+include_once( get_template_directory() . '/lib/init.php' );
+
 
  // Get the stylesheet
  function mychildtheme_enqueue_styles() {
@@ -22,7 +24,14 @@ if ( ! defined( 'UTKCHANCELLOR_VERSION' ) ) {
 require_once ( 'filters/region-headsearch.php' );
 require_once ( 'filters/region-footer.php' );
 
-
+//* Add support for custom header
+add_theme_support( 'custom-header', array(
+	'flex-width'      => true,
+	'width'           => 400,
+	'flex-height'     => true,
+	'height'          => 150,
+	'header-selector' => '.site-title a',
+) );
 
 /**
  * Registers block categories, and type.
@@ -48,3 +57,9 @@ function utkchancellor_register_block_pattern_categories() {
 	}
 }
 add_action( 'init', 'utkchancellor_register_block_pattern_categories', 9 );
+
+// Removing things from Genesis
+// =======================================================================
+
+// Remove the site description
+remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
