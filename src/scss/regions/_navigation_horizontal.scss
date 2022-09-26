@@ -26,31 +26,9 @@
   @extend .nav-link;
 }
 
-// Because the navigation in 'mobile' is in a single div, and the navigation in 'desktop' appears in two places we have to do some nasty hiding and showing with css.
 
 // Completely hide the sub nav on mobile, but keep the main menu fully expanded.
 
-#secondary-menu {
-  display: none;
-  @include media-breakpoint-up(lg) {
-    display: inline;
-    background: $utcoolrock;
-    display: flex;
-    flex-wrap: wrap;
-    a {
-      padding: $spacer * 2 $spacer;
-      color: $utsmokeytext;
-      text-decoration: none;
-      background: $utcoolrock;
-      display: block;
-    }
-    li.current-menu-item {
-      a {
-        font-weight: bold;
-      }
-    }
-  }
-}
 
 // Here we put the full navigation off-canvas
 #site-navigation {
