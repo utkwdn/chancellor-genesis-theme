@@ -33,6 +33,23 @@ add_theme_support( 'custom-header', array(
 	'header-selector' => '.site-title a',
 ) );
 
+/* Register your footer sidebar. */
+add_action( 'widgets_init', 'utkchancellor_sidebar' );
+function utkchancellor_sidebar() {
+    register_sidebar(
+        array(
+            'id'            => 'utkchancellor_footer',
+            'name'          => __( 'Footer Sidebar' ),
+            'description'   => __( 'Add contact information here.' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+    /* Repeat register_sidebar() code for multiple sidebars. */
+}
+
 /**
  * Registers block categories, and type.
  *
