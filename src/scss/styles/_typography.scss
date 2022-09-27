@@ -40,18 +40,19 @@ h1,
 // }
 
 // Default wordpress styles. Getting them in line with Bootstrap
-.has-small-font-size {
-  @extend .fs-6;
-}
-.has-medium-font-size {
-  @extend .fs-3;
-}
-.has-large-font-size {
-  @extend .fs-2;
-}
-.has-huge-font-size {
-  @extend .fs-1;
-}
+// Controlling in theme.json settings.custom.typography sets scale that is then used in settings.typography.fontSizes
+// .has-small-font-size {
+//   @extend .fs-6;
+// }
+// .has-medium-font-size {
+//   @extend .fs-3;
+// }
+// .has-large-font-size {
+//   @extend .fs-2;
+// }
+// .has-huge-font-size {
+//   @extend .fs-1;
+// }
 
 h1 {
   // margin-top: calc($spacer * 6);
