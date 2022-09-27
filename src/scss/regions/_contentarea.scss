@@ -1,21 +1,37 @@
-#content article >,
-#content article .entry-content > {
-  :not(.alignfull):not(.entry-content):not(.strip) {
-    width: calc(100% - 30px);
-    margin-right: auto;
-    margin-left: auto;
 
-    @include media-breakpoint-up(sm) {
-      max-width: 540px;
+@include media-breakpoint-up(md) {
+  .content-sidebar-wrap {
+    display: flex;
+    justify-items: center;
+    align-items: flex-start;
+    .widget-area {
+      flex: 1 1 0;
     }
-    @include media-breakpoint-up(md) {
-      max-width: 720px;
+    main.content {
+      flex: 2 1 0;
+      margin-right: $spacer * 3;
     }
-    @include media-breakpoint-up(lg) {
-      max-width: 1060px;
+  }
+
+  body.sidebar-content {
+    .content-sidebar-wrap {
+      .widget-area {
+        margin-right: 0;
+      }
+      main.content {
+        order: 1;
+        margin-left: $spacer * 3;
+      }
     }
-    @include media-breakpoint-up(xl) {
-      max-width: 1540px;
+  }
+  body.content-sidebar {
+    .content-sidebar-wrap {
+      .widget-area {
+        margin-right: 0;
+      }
+      main.content {
+        margin-left: $spacer * 3;
+      }
     }
   }
 }
