@@ -33,6 +33,70 @@ add_theme_support( 'custom-header', array(
 	'header-selector' => '.site-title a',
 ) );
 
+/* Register your footer sidebar. */
+add_action( 'widgets_init', 'utkchancellor_sidebar' );
+function utkchancellor_sidebar() {
+    register_sidebar(
+        array(
+            'id'            => 'utkchancellor_footer',
+            'name'          => __( 'Footer Sidebar' ),
+            'description'   => __( 'Add contact information here.' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+    /* Repeat register_sidebar() code for multiple sidebars. */
+}
+
+
+// Create a new layout, fixed width grid.
+add_action( 'after_setup_theme', 'authority_register_grid_layout' );
+/**
+ * Registers custom grid layout.
+ */
+function authority_register_grid_layout() {
+	genesis_register_layout(
+		'authority-grid', // A layout slug of your choice. Used in body classes. 
+		[
+			'label' => __( 'Three-column Grid', 'authority-pro' ),
+			'img'   => get_stylesheet_directory_uri() . '/images/grid.gif',
+			'type'  => [ 'category', 'post_tag' ],
+		]
+	);
+}
+
+
+//* Register new, custom layout
+genesis_register_layout( 'content-bottom-sidebars', array(
+    'label' => 'Max Width, No Sidebars',
+    'img' => get_stylesheet_directory_uri() . '/images/content-bottom-sidebars.png',
+) );
+
+//* Include template
+add_action( 'template_include', 'content_bottom_sidebars_template', 9999 );
+function content_bottom_sidebars_template( $template ) {
+
+	$layout = genesis_site_layout();
+
+	if ( $layout == 'content-bottom-sidebars' ) {
+
+		$template = locate_template( array( 'template-nosidebar.php' ) );
+
+	}
+
+	return $template;
+
+}
+
+
+// Kill the two side-bar layouts
+genesis_unregister_layout( 'content-sidebar-sidebar' );
+genesis_unregister_layout( 'sidebar-content-sidebar' );
+genesis_unregister_layout( 'sidebar-sidebar-content' );
+
+unregister_sidebar( 'sidebar-alt' );
 /**
  * Registers block categories, and type.
  *

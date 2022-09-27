@@ -15,8 +15,9 @@ function utkchancellor_footer() {
       <div class="site-info col-12 col-md-6">
                 <p class="h5 text-white"><a  class="text-reset text-decoration-none" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
           <div class="contact-info mt-5 text-white">
-            <strong>Make a sidebar and put it here! Then we can get some CMS editable contact info.</strong>
-            <?php // dynamic_sidebar( 'footer-1' ); ?>
+		    <div id="custom-sidebar" class="sidebar">
+              <?php dynamic_sidebar( 'utkchancellor_footer' ); ?>
+            </div>
           </div>
         <?php  // get_template_part( 'template-parts/region-contact' ); ?>
           </div>
