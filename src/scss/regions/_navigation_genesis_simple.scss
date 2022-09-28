@@ -97,21 +97,7 @@
     display: block;
   }
   .sub-menu {
-    @extend .row;
-    @extend .list-unstyled;
-    font-size: $font-size-base;
-    li {
-      @extend .col-6;
-      margin-bottom: 0.5 * $spacer;
-      &.current-menu-item > a {
-        font-weight: bold;
-      }
-      a {
-        padding: calc($spacer / 2) $spacer;
-        background: $utgray1;
-        border-radius: $border-radius;
-      }
-    }
+    display: none;
   }
 
   // now let's style for bigger screens.
@@ -132,19 +118,6 @@
       &.current-menu-item,
       &.current-menu-ancestor {
         background-color: $utcoolrock;
-        .sub-menu {
-          display: flex;
-          position: absolute;
-          li {
-            width: auto;
-            flex: 1 1 1;
-            background: none;
-            a {
-              background: none;
-              font-size: $font-size-sm;
-            }
-          }
-        }
       }
       a {
         padding:  $spacer;
@@ -154,6 +127,17 @@
       }
     }
 
+  }
+  &.menu-secondary {
+    li {
+      a {
+        padding:  calc($spacer/2) $spacer;
+        background-color: darken($utcoolrock,0.8);
+        &:hover {
+          background-color: lighten($utcoolrock, 0.8);
+        }
+      }
+    } 
   }
 }
 
