@@ -19,6 +19,7 @@ remove_action( 'genesis_footer', 'genesis_do_subnav', 7 );
 
 //* Remove site footer widgets
 remove_action( 'genesis_before_footer', 'genesis_footer_widget_areas' );
+remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
 
 //* Remove site footer elements
 remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
