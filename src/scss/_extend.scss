@@ -37,3 +37,17 @@
 //   margin-left: -80px;
 //   margin-right: -80px;
 // }
+
+.clipCorner {
+  --notchSize: 5vw;
+  clip-path: polygon(
+    0% 0%,
+    var(--notchSize) 0%,
+    calc(100% - var(--notchSize)) 0%,
+    100% var(--notchSize),
+    100% 100%,
+    100% 100%,
+    0% 100%,
+    0% 0%
+  );
+}
