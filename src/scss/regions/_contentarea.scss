@@ -1,5 +1,6 @@
 
 @include media-breakpoint-up(md) {
+  body.sidebar-content, body.content-sidebar {
   .content-sidebar-wrap {
     display: flex;
     justify-items: center;
@@ -34,4 +35,5 @@
       }
     }
   }
+}
 }

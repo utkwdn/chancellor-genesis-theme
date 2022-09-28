@@ -51,22 +51,12 @@ function utkchancellor_sidebar() {
 }
 
 
-// Create a new layout, fixed width grid.
-add_action( 'after_setup_theme', 'authority_register_grid_layout' );
-/**
- * Registers custom grid layout.
- */
-function authority_register_grid_layout() {
-	genesis_register_layout(
-		'authority-grid', // A layout slug of your choice. Used in body classes. 
-		[
-			'label' => __( 'Three-column Grid', 'authority-pro' ),
-			'img'   => get_stylesheet_directory_uri() . '/images/max-width-thumb.gif',
-			'type'  => [ 'category', 'post_tag' ],
-		]
-	);
-}
 
+ //* Register new, custom layout
+ genesis_register_layout( 'content-bottom-sidebars', array(
+	'label' => 'Max Width, No Sidebars',
+	'img' => get_stylesheet_directory_uri() . '/images/max-width-thumb.gif',
+) );
 
 //* Include template
 add_action( 'template_include', 'content_bottom_sidebars_template', 9999 );
@@ -83,6 +73,8 @@ function content_bottom_sidebars_template( $template ) {
 	return $template;
 
 }
+
+
 
 // Add layout options back in on archive pages
 if ( function_exists( 'genesis_add_type_to_layout' ) ) {
