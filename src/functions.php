@@ -1,17 +1,15 @@
 <?php
 if ( ! defined( 'UTKCHANCELLOR_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'UTKCHANCELLOR_VERSION', '0.1.2' );
+	define( 'UTKCHANCELLOR_VERSION', '0.1.3' );
 }
-
-// Add full-width to blocks – this is now added in the theme.json as "layout" and is not needed here
-// function setup_theme() {
-// 	add_theme_support( 'align-wide' );
-//   }
 include_once( get_template_directory() . '/lib/init.php' );
 
 
- // Get the stylesheet
+// WordPress Set Up
+// ===============================================================
+
+// Get the stylesheet
  function mychildtheme_enqueue_styles() {
 	wp_enqueue_style( 'utkchancellor-style', get_template_directory_uri() . '/style.css', array(), UTKCHANCELLOR_VERSION, true );
 	wp_enqueue_script( 'utkchancellor-bootstrap',  'https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js', array(), UTKCHANCELLOR_VERSION, true ); 
@@ -19,12 +17,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 }
  add_action( 'wp_enqueue_scripts', 'mychildtheme_enqueue_styles' );
 
-
-// UT Filters below
-require_once ( 'filters/region-headsearch.php' );
-require_once ( 'filters/region-footer.php' );
-
-//* Add support for custom header
+// Add support for custom header
 add_theme_support( 'custom-header', array(
 	'flex-width'      => true,
 	'width'           => 400,
@@ -33,7 +26,7 @@ add_theme_support( 'custom-header', array(
 	'header-selector' => '.site-title a',
 ) );
 
-/* Register your footer sidebar. */
+// Register your footer sidebar. 
 add_action( 'widgets_init', 'utkchancellor_sidebar' );
 function utkchancellor_sidebar() {
     register_sidebar(
@@ -52,70 +45,24 @@ function utkchancellor_sidebar() {
 
 
 
- //* Register new, custom layout
- genesis_register_layout( 'content-bottom-sidebars', array(
-	'label' => 'Max Width, No Sidebars',
-	'img' => get_stylesheet_directory_uri() . '/images/max-width-thumb.gif',
-) );
+// UT Filters to add HTML
+// ===============================================================
 
-//* Include template
-add_action( 'template_include', 'content_bottom_sidebars_template', 9999 );
-function content_bottom_sidebars_template( $template ) {
-
-	$layout = genesis_site_layout();
-
-	if ( $layout == 'content-bottom-sidebars' ) {
-
-		$template = locate_template( array( 'template-nosidebar.php' ) );
-
-	}
-
-	return $template;
-
-}
+require_once ( 'functions/filter-region-headsearch.php' );
+require_once ( 'functions/filter-region-footer.php' );
 
 
+// Functions to modify elements
+// ===============================================================
 
-// Add layout options back in on archive pages
-if ( function_exists( 'genesis_add_type_to_layout' ) ) {
-	genesis_add_type_to_layout( 'content-sidebar', [ 'category', 'post_tag' ] );
-	genesis_add_type_to_layout( 'sidebar-content', [ 'category', 'post_tag' ] );
-	genesis_add_type_to_layout( 'full-width-content', [ 'category', 'post_tag' ] );
-}
+require_once ( 'functions/inc-breadcrumb.php' );
+require_once ( 'functions/inc-layouts.php' );
+require_once ( 'functions/inc-patterns.php' );
 
 
 
 
-// Kill the two side-bar layouts
-genesis_unregister_layout( 'content-sidebar-sidebar' );
-genesis_unregister_layout( 'sidebar-content-sidebar' );
-genesis_unregister_layout( 'sidebar-sidebar-content' );
 
-unregister_sidebar( 'sidebar-alt' );
-/**
- * Registers block categories, and type.
- *
- * (Stole this from utkchancellor)
- */
-function utkchancellor_register_block_pattern_categories() {
-
-	/* Functionality specific to the Block Pattern Explorer plugin. */
-	if ( function_exists( 'register_block_pattern_category_type' ) ) {
-		register_block_pattern_category_type( 'utkchancellor', array( 'label' => __( 'utkchancellor', 'utkchancellor' ) ) );
-	}
-
-	$block_pattern_categories = array(
-		'utkchancellor-general' => array(
-			'label'         => __( 'Chancellor', 'utkchancellor' ),
-			'categoryTypes' => array( 'utkchancellor' ),
-		),
-	);
-
-	foreach ( $block_pattern_categories as $name => $properties ) {
-		register_block_pattern_category( $name, $properties );
-	}
-}
-add_action( 'init', 'utkchancellor_register_block_pattern_categories', 9 );
 
 // Removing things from Genesis
 // =======================================================================

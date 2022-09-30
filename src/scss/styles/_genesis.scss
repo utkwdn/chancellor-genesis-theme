@@ -28,7 +28,7 @@
 }
 
 .breadcrumb-link-wrap {
-  @extend .breadcrumb-item;
+  // @extend .breadcrumb-item;
   .breadcrumb-link {
     padding-left: calc($spacer / 2);
     padding-right: calc($spacer / 2);
