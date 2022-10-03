@@ -12,9 +12,7 @@
 <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<!-- wp:columns -->
-<div class="wp-block-columns"><!-- wp:column {"width":"75%"} -->
-<div class="wp-block-column" style="flex-basis:75%"><!-- wp:paragraph -->
+<!-- wp:paragraph -->
 <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer accumsan laoreet dui, ut interdum arcu viverra vel. Praesent libero metus, condimentum vel libero eu, posuere dapibus odio. Donec in pulvinar turpis. Pellentesque tellus mi, varius et ante sit amet, sagittis commodo ex. Curabitur malesuada elementum tortor nec facilisis. Sed sit amet eros ac massa vehicula interdum vel eget est.</p>
 <!-- /wp:paragraph -->
 
@@ -52,13 +50,7 @@
 
 <!-- wp:paragraph -->
 <p><a href="https://#">This Article First Appeared in this Source</a></p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"width":"25%"} -->
-<div class="wp-block-column" style="flex-basis:25%"></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns -->
+<!-- /wp:paragraph -->
 
 <!-- wp:spacer -->
 <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
