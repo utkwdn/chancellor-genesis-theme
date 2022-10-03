@@ -20,7 +20,7 @@
       },
       "core/heading": {
         "color": {
-          "palette": [
+          "palette": [   
             {
               "slug": "smokey",
               "color": "#4b4b4b",
@@ -47,6 +47,21 @@
               "name": "White"
             }
           ]
+        }
+      },    
+      "core/paragraph": {
+        "color": {
+          "palette": [ ]
+        }
+      },
+      "core/list": {
+        "color": {
+          "palette": [ ]
+        }
+      },            
+      "core/button": {
+        "border": {
+            "radius": false
         }
       }
     },
@@ -84,7 +99,12 @@
           "color": "#ffffff",
           "name": "White"
         }
-      ]
+      ],
+			"custom": false,
+			"defaultPalette": false,
+			"gradients": [],
+			"customGradient": false,
+			"defaultGradients": false
     },
     "layout": {
       "contentSize": "1500px",
