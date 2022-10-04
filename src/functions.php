@@ -61,6 +61,11 @@ require_once ( 'functions/inc-layouts.php' );
 require_once ( 'functions/inc-patterns.php' );
 
 
+// Disabling blocks
+// ===============================================================
+
+require_once ( 'functions/inc-disableblocks.php' );
+
 
 
 
