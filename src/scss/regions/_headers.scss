@@ -4,11 +4,11 @@
 .site-title {
   font-size: $font-size-lg;
   display: flex;
-  margin: 0.25 *  $spacer;
+  margin: 0.25 * $spacer;
   a {
-    background-size: $spacer*2 $spacer*2 !important;
+    background-size: $spacer * 2 $spacer * 2 !important;
     color: $utsmokey;
-    padding:  $spacer 0  $spacer  $spacer*4;
+    padding: $spacer 0 $spacer $spacer * 4;
     text-decoration: none;
     font-weight: $font-weight-bolder;
   }
@@ -69,6 +69,11 @@ h1.site-title {
     background-size: 45px 45px;
     padding-left: 55px;
   }
+}
+
+.entry-title {
+  margin: 0 0 calc($spacer * 3) 0;
+  border: 2px solid red;
 }
 
 // // Centered Logo on small screens

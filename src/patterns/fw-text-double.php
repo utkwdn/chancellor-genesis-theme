@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Full Width Text with Double Images
+ * Title: Full Width Text with Double Images.
  * Slug: utkchancellor/fw-text-double
  * Categories: utkchancellor-general
  * Viewport Width: 1280  

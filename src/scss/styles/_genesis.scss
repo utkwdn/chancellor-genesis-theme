@@ -27,10 +27,23 @@
   max-width: 100%;
 }
 
+.breadcrumb {
+  margin-bottom: calc($spacer * 2);
+  font-size: calc(var(--wp--custom--typography--small) * 0.8);
+  color: $utsmokey;
+}
 .breadcrumb-link-wrap {
   // @extend .breadcrumb-item;
+
   .breadcrumb-link {
     padding-left: calc($spacer / 2);
     padding-right: calc($spacer / 2);
+    color: $utlinkriver;
+    &:hover {
+      color: #114c81;
+    }
+  }
+  &:first-child {
+    padding-left: 0 !important;
   }
 }
