@@ -70,10 +70,8 @@ h1.site-title {
     padding-left: 55px;
   }
 }
-
-.entry-title {
-  margin: 0 0 calc($spacer * 3) 0;
-  border: 2px solid red;
+.entry-header {
+  padding: 0 0 calc($spacer * 2) 0;
 }
 
 // // Centered Logo on small screens

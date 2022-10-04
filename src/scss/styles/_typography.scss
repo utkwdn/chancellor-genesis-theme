@@ -110,3 +110,11 @@ h2.heading-oa-bar {
 .lead strong {
   font-weight: $font-weight-bold;
 }
+
+h2.quietHeading {
+  font-size: 80%;
+  line-height: 120%;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  margin-bottom: 1.7vw;
+}

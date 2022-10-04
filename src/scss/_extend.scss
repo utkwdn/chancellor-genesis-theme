@@ -115,3 +115,22 @@ h1.adaOrange {
 .backgroundTransparent {
   background-color: transparent !important;
 }
+.fake-d-flex {
+  // temporary fix until we have the framework in place
+  //parent flexbox group for .page-title-group and .hero-img-group
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: relative;
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+// .wp-block-cover,
+// .wp-block-cover-image {
+//   width: 100vw;
+// }

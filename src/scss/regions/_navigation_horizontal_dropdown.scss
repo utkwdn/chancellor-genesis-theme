@@ -1,11 +1,11 @@
 nav {
   background: $utgray1;
+  display: flex;
+  align-items: stretch;
   width: 100vw;
   margin: 0 calc(50% - 50vw);
   width: 100vw;
-  margin-bottom: calc($spacer * 3);
-  display: flex;
-  align-items: stretch;
+  margin-bottom: calc($spacer * 1.5);
 }
 .genesis-nav-menu {
   background: $utgray1;
@@ -17,11 +17,15 @@ nav {
   margin: 0;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   align-items: stretch;
-  a {
-    text-decoration: none;
-    color: $utsmokeytext;
+  gap: calc($spacer * 2);
+  @media screen and (min-width: 900px) {
+    border: 2px solid red;
+    flex-direction: row;
   }
+
   li {
     display: block;
     // float: left;
@@ -31,6 +35,11 @@ nav {
     text-decoration: none;
     transition-duration: 0.5s;
     margin: 0;
+    a {
+      text-decoration: none;
+      color: $utsmokeytext;
+      display: block;
+    }
     &.current-menu-item,
     &.current-menu-ancestor {
       background: $utcoolrock;
@@ -55,6 +64,10 @@ nav {
       li ul {
         display: none;
       }
+    }
+
+    .menu-item-has-children {
+      border: 1px solid red;
     }
 
     li {
