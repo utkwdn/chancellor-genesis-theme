@@ -20,7 +20,7 @@
       },
       "core/heading": {
         "color": {
-          "palette": [
+          "palette": [   
             {
               "slug": "smokey",
               "color": "#4b4b4b",
@@ -47,6 +47,21 @@
               "name": "White"
             }
           ]
+        }
+      },    
+      "core/paragraph": {
+        "color": {
+          "palette": [ ]
+        }
+      },
+      "core/list": {
+        "color": {
+          "palette": [ ]
+        }
+      },            
+      "core/button": {
+        "border": {
+            "radius": false
         }
       }
     },
@@ -84,7 +99,12 @@
           "color": "#ffffff",
           "name": "White"
         }
-      ]
+      ],
+			"custom": false,
+			"defaultPalette": false,
+			"gradients": [],
+			"customGradient": false,
+			"defaultGradients": false
     },
     "layout": {
       "contentSize": "1500px",
@@ -94,7 +114,7 @@
       "dropCap": false,
       "fontFamilies": [
         {
-          "fontFamily": "'Gotham A', 'Gotham B', 'Gotham SSm 4r', 'Gotham SSm A', 'Gotham SSm B', 'Helvetica Neue', Helvetica, Arial, system-ui, -apple-system, sans-serif",
+          "fontFamily": "'Gotham A', 'Gotham B', 'Gotham SSm 4r', 'Gotham SSm A', 'Gotham SSm B', 'Montserrat', 'Helvetica Neue', Helvetica, Arial, system-ui, -apple-system, sans-serif",
           "name": "Gotham",
           "slug": "primary",
           "fontFace": [
@@ -103,7 +123,11 @@
               "fontFamily": "Gotham",
               "fontStretch": "normal",
               "fontStyle": "normal",
-              "fontWeight": "200 400 700 800 900"
+              "fontWeight": "200 400 700 800 900",
+              "src": [
+                "file:./images/fonts/Montseratt/Montserrat-Italic-VariableFont_wght.ttf",
+                "file:./images/fonts/Montseratt/Montserrat-VariableFont_wght.ttf"
+              ]
             }
           ]
         },
