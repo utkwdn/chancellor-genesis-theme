@@ -1,5 +1,10 @@
-.wp-block-cover,
-.wp-block-cover-image {
-  width: auto;
-  position: relative;
+.wp-block-cover {
+  &.alignfull {
+    width: auto;
+    // border: 2px solid green;
+  }
 }
+
+// .wp-block-cover-image {
+//   position: relative;
+// }
