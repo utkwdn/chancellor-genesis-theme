@@ -1,16 +1,21 @@
 <?php 
 
 
-//* Change the breadcrumb separator.
-add_filter( 'genesis_breadcrumb_args', 'gk_change_breadcrumb_separator' );
-function gk_change_breadcrumb_separator( $args ) {
-    $args['sep'] = ' &rsaquo; ';
-    return $args;
-}
+// This removes several of the weird lables that are set in default
+// It also modifies the HTML so that it's like Bootstrap's
 
-//* Remove 'You are here' on the front of breadcrumb trail
-add_filter( 'genesis_breadcrumb_args', 'gk_prefix_breadcrumb' );
-function gk_prefix_breadcrumb( $args ) {
+add_filter( 'genesis_breadcrumb_args', 'gk_prefix_author_breadcrumb' );
+function gk_prefix_author_breadcrumb( $args ) {
+    $args['prefix'] = '<nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">';
+    $args['suffix'] = '</li></ul></nav>';
+    $args['sep'] = '</li><li class="breadcrumb-item">';
     $args['labels']['prefix'] = ''; 
+    $args['labels']['author'] = 'Posts By ';
+    $args['labels']['category'] = ' '; 
+    $args['labels']['tag'] = ' ';
+    $args['labels']['date'] = ' ';
+    $args['labels']['search'] = ' ';
+    $args['labels']['tax'] = ' ';
+    $args['labels']['post_type'] = ' ';
     return $args;
 }

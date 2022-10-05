@@ -25,6 +25,7 @@ remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
 remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
 remove_action( 'genesis_footer', 'genesis_do_footer' );
 remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
+remove_action( 'genesis_sidebar_alt', 'genesis_do_sidebar_alt' );
 
 //* Run the Genesis loop
 genesis();

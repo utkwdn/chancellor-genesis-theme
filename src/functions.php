@@ -75,3 +75,12 @@ require_once ( 'functions/inc-disableblocks.php' );
 
 // Remove the site description
 remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
+
+// Remove Genesis SEO settings from post/page editor
+remove_action( 'admin_menu', 'genesis_add_inpost_seo_box' );
+
+// Remove Genesis SEO settings option page
+remove_theme_support( 'genesis-seo-settings-menu' );
+
+// Remove Genesis SEO settings from taxonomy editor
+remove_action( 'admin_init', 'genesis_add_taxonomy_seo_options' );
