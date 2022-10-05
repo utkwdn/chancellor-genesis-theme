@@ -403,3 +403,30 @@
     }
   } // end .columns-6
 }
+
+/* - - - - - - - - - - - - */
+/* Latest Post Universal */
+/* - - - - - - - - - - - - */
+.latestPostAddOn {
+  text-transform: capitalize;
+}
+
+/* - - - - - - - - - - - - */
+/* In Focus Section Lastest Posts */
+/* - - - - - - - - - - - - */
+.focusPost li {
+  border-bottom: none;
+}
+.focusPost li a {
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  color: #707070;
+}
+.focusPost li a:hover {
+  color: #1a73c5;
+}
+
+.focusPost div[class$='__post-excerpt'] {
+  font-size: 1rem;
+}

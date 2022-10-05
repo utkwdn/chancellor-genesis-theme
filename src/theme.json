@@ -20,48 +20,28 @@
       },
       "core/heading": {
         "color": {
-          "palette": [   
-            {
-              "slug": "smokey",
-              "color": "#4b4b4b",
-              "name": "Web Smokey"
-            },
+          "palette": [
             {
               "slug": "smokeyX",
               "color": "#333333",
               "name": "Web SmokeyX"
-            },
-            {
-              "slug": "light",
-              "color": "#f6f6f6",
-              "name": "Light"
-            },
-            {
-              "slug": "gray2",
-              "color": "#e0e0e0",
-              "name": "Gray 2"
-            },
-            {
-              "slug": "white",
-              "color": "#ffffff",
-              "name": "White"
             }
           ]
         }
-      },    
+      },
       "core/paragraph": {
         "color": {
-          "palette": [ ]
+          "palette": []
         }
       },
       "core/list": {
         "color": {
-          "palette": [ ]
+          "palette": []
         }
-      },            
+      },
       "core/button": {
         "border": {
-            "radius": false
+          "radius": false
         }
       }
     },
@@ -100,14 +80,14 @@
           "name": "White"
         }
       ],
-			"custom": false,
-			"defaultPalette": false,
-			"gradients": [],
-			"customGradient": false,
-			"defaultGradients": false
+      "custom": false,
+      "defaultPalette": false,
+      "gradients": [],
+      "customGradient": false,
+      "defaultGradients": false
     },
     "layout": {
-      "contentSize": "1500px",
+      "contentSize": "900px",
       "wideSize": "80vw"
     },
     "typography": {

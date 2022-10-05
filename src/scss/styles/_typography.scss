@@ -91,7 +91,7 @@ h5 + h6 {
 }
 .entry-header h1 {
   // playing with font size in grey bar
-  margin: 0 0 0 0;
+
   font-size: $h2-font-size;
   padding: 0;
 }
@@ -109,4 +109,12 @@ h2.heading-oa-bar {
 }
 .lead strong {
   font-weight: $font-weight-bold;
+}
+
+h2.quietHeading {
+  font-size: 80%;
+  line-height: 120%;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  margin-bottom: 1.7vw;
 }
