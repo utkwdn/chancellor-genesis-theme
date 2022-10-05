@@ -31,6 +31,12 @@
   margin: 32px calc(50% - 50vw);
   display: block;
   position: relative;
+  & img {
+    border: 2px solid blue;
+    width: 100%;
+
+    margin: 32px calc(50% - 50vw) 0 !important;
+  }
 }
 
 // .alignwide {
