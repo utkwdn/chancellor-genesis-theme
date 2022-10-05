@@ -1,4 +1,4 @@
-nav {
+nav.nav-primary {
   background: $utgray1;
   display: flex;
   align-items: stretch;
@@ -6,6 +6,16 @@ nav {
   margin: 0 calc(50% - 50vw);
   width: 100vw;
   margin-bottom: calc($spacer * 1.5);
+  ul {
+    display: flex;
+    align-items: stretch;
+    align-content: stretch;
+    // background-color: red;
+    li {
+      height: 100%;
+      // background-color: pink;
+    }
+  }
 }
 .genesis-nav-menu {
   background: $utgray1;
@@ -21,6 +31,7 @@ nav {
   flex-direction: column;
   align-items: stretch;
   gap: calc($spacer * 2);
+  margin-left: calc($spacer / 2);
   @media screen and (min-width: 900px) {
     // border: 2px solid red;
     flex-direction: row;
@@ -28,8 +39,8 @@ nav {
 
   li {
     display: block;
+    height: 100%;
     // float: left;
-    // padding: calc($spacer/2) $spacer;
     align-content: space-between;
     position: relative;
     text-decoration: none;
