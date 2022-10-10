@@ -50,6 +50,15 @@ nav.nav-primary {
     transition-duration: 0.5s;
     padding: 0.5rem 1rem;
     margin: 0;
+    a:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
     a {
       text-decoration: none;
       color: $utsmokeytext;
@@ -111,6 +120,8 @@ nav.nav-primary {
     padding: 0.5rem 1rem;
     &:hover {
       background: $utcoolrock;
+
+      transition: all 0.5s ease;
       cursor: pointer;
       height: auto;
       width: 100%;
@@ -119,6 +130,8 @@ nav.nav-primary {
   li.current-menu-item {
     background: $utgray2;
     border-bottom: 2px solid $utorange;
+
+    transition: all 0.5s ease;
     // width: 100%;
     // text-align: center;
   }
