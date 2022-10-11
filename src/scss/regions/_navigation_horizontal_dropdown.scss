@@ -1,13 +1,16 @@
+.site-header .wrap {
+  @extend .d-flex;
+}
+
 nav.nav-primary {
-  right: -100vw;
-  background: $utgray1;
+  // right: -100vw;
+  // background: $utgray1;
   display: flex;
   align-items: stretch;
   width: 100vw;
   margin: 0 calc(50% - 50vw);
   width: 100vw;
   margin-bottom: calc($spacer);
-
   ul {
     padding: 0;
     margin: 0;
@@ -24,7 +27,7 @@ nav.nav-primary {
   }
 }
 .genesis-nav-menu {
-  background: $utgray1;
+  //background: $utgray1;
   // font-size: calc($font-size-sm * 0.9);
   font-size: var(--wp--custom--typography--tiny);
   // border: 1px solid blue;
@@ -38,8 +41,9 @@ nav.nav-primary {
   align-items: stretch;
   // gap: calc($spacer * 1);
   margin-left: calc($spacer / 2);
-  @media screen and (min-width: 900px) {
+  @include media-breakpoint-up(lg) { 
     // border: 2px solid red;
+    background: $utgray1;
     flex-direction: row;
   }
 
@@ -52,7 +56,7 @@ nav.nav-primary {
     margin: 0;
     width: 100%;
     // border: 0.5px solid green;
-    @media screen and (min-width: 900px) {
+    @include media-breakpoint-up(lg) { 
       width: auto;
 
       transition-duration: 0.5s;
@@ -88,7 +92,7 @@ nav.nav-primary {
       min-width: 10rem;
       padding-left: 0;
 
-      @media screen and (min-width: 900px) {
+      @include media-breakpoint-up(lg) { 
         display: none;
         opacity: 0;
 
@@ -108,7 +112,7 @@ nav.nav-primary {
       margin-bottom: -1rem;
 
       border-bottom: 2px solid $utgray1;
-      @media screen and (min-width: 900px) {
+      @include media-breakpoint-up(lg) { 
         margin: 0.5rem 0 -1rem 0;
       }
 
@@ -125,7 +129,7 @@ nav.nav-primary {
     font-weight: bold;
   }
 
-  @media screen and (min-width: 900px) {
+  @include media-breakpoint-up(lg) { 
     li:hover > ul,
     li:focus-within > ul,
     li ul:hover,
@@ -153,7 +157,7 @@ nav.nav-primary {
   li.current-menu-item {
     background: $utgray2;
     // border-bottom: 2px solid $utorange;
-    @media screen and (min-width: 900px) {
+    @include media-breakpoint-up(lg) {
       transition: all 0.5s ease;
     }
     // width: 100%;
@@ -166,7 +170,7 @@ nav.nav-primary {
   border: none;
   margin-left: auto;
   display: block;
-  @media screen and (min-width: 900px) {
+  @include media-breakpoint-up(lg)  {
     border: 2px solid red !important;
     display: none;
   }
