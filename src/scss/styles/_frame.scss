@@ -185,6 +185,15 @@
   }
 }
 
+.framedGreyShadow {
+  filter: drop-shadow(1.25rem 1.25rem 0px $utgray2);
+  margin: 1rem;
+}
+.framedOrangeShadow {
+  filter: drop-shadow(1.25rem 1.25rem 0px $utorange);
+  margin: 1rem;
+}
+
 // .framed {
 //   //  justify-content: center;
 //   // display: flex;
