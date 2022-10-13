@@ -53,7 +53,7 @@
 //   }
 // }
 
-.clipCorner {
+.clipCorner-tr {
   --notchSize: 5vw;
   clip-path: polygon(
     0% 0%,
@@ -64,6 +64,19 @@
     100% 100%,
     0% 100%,
     0% 0%
+  );
+}
+
+.clipCorner-tl {
+  --notchSize: 5vw;
+  clip-path: polygon(
+    0 var(--notchSize),
+    var(--notchSize) 0%,
+    calc(100% - var(--notchSize)) 0%,
+    100% 0,
+    100% 100%,
+    100% 100%,
+    0% 100%
   );
 }
 
