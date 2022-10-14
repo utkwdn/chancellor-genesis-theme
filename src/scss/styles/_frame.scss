@@ -194,6 +194,27 @@
   margin: 1rem;
 }
 
+.framedThin {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: auto;
+    border-right: 2px solid $utorange;
+
+    border-bottom: 2px solid $utorange;
+    z-index: 0;
+    width: 100%;
+
+    top: 3rem;
+    right: -1rem;
+    bottom: -2rem;
+    left: 2rem;
+    z-index: 1rem;
+  }
+}
+
 // .framed {
 //   //  justify-content: center;
 //   // display: flex;

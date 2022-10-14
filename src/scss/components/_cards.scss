@@ -170,3 +170,10 @@
     position: relative;
   }
 }
+
+.introductionCard {
+  padding: calc($spacer * 10) !important;
+  .has-background {
+    padding: calc($spacer * 10) !important;
+  }
+}
