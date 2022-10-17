@@ -53,6 +53,12 @@
 //   }
 // }
 
+.wp-block-image {
+  &.alignfull {
+    width: auto;
+    margin: 0 calc(50% - 50vw);
+  }
+}
 .clipCorner-tr-container {
   --notchSize: 5vw;
   clip-path: polygon(
