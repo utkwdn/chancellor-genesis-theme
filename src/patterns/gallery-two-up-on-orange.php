@@ -18,7 +18,7 @@
 <div class="wp-block-group"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"width":"57%"} -->
 <div class="wp-block-column" style="flex-basis:57%"><!-- wp:image {"align":"right","id":761,"width":1024,"height":680,"sizeSlug":"large","linkDestination":"none","className":"clipCorner-tl"} -->
-<figure class="wp-block-image alignright size-large is-resized clipCorner-tl"><img src="http://localhost:8888/wp-chancellorGenesis/wp-content/uploads/2022/10/gallery-large-1024x680.png" alt="" class="wp-image-761" width="1024" height="680"/></figure>
+<figure class="wp-block-image alignright size-large is-resized clipCorner-tl"><img src="https://images.utk.edu/wds/gallery-2up-placeholder-large.png" alt="" class="wp-image-761" width="1024" height="680"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -28,7 +28,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:image {"align":"left","id":784,"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image alignleft size-full"><img src="http://localhost:8888/wp-chancellorGenesis/wp-content/uploads/2022/10/plowman-gallery-small-01.jpg" alt="" class="wp-image-784"/></figure>
+<figure class="wp-block-image alignleft size-full"><img src="https://images.utk.edu/wds/gallery-2up-placeholder-small.png" alt="" class="wp-image-784"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
