@@ -22,3 +22,6 @@
     @extend .form-check-input;
   }
 }
+.widget select {
+  @extend .form-select;
+}
