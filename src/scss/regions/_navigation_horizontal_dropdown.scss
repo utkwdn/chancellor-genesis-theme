@@ -1,5 +1,10 @@
+.site-header .wrap {
+  @extend .d-flex;
+}
+
 nav.nav-primary {
-  background: $utgray1;
+  // right: -100vw;
+  // background: $utgray1;
   display: flex;
   align-items: stretch;
   width: 100vw;
@@ -14,7 +19,7 @@ nav.nav-primary {
     align-content: center;
     // background-color: red;
     li {
-      height: 3rem;
+      // height: 3rem;
       display: flex;
       align-items: center;
       // background-color: pink;
@@ -22,9 +27,9 @@ nav.nav-primary {
   }
 }
 .genesis-nav-menu {
-  background: $utgray1;
+  //background: $utgray1;
   // font-size: calc($font-size-sm * 0.9);
-  font-size: var(--wp--custom--typography--small);
+  font-size: var(--wp--custom--typography--tiny);
   // border: 1px solid blue;
   padding: $spacer 0;
   list-style: none;
@@ -36,24 +41,39 @@ nav.nav-primary {
   align-items: stretch;
   // gap: calc($spacer * 1);
   margin-left: calc($spacer / 2);
-  @media screen and (min-width: 900px) {
+  @include media-breakpoint-up(lg) { 
     // border: 2px solid red;
+    background: $utgray1;
     flex-direction: row;
   }
 
-  li {
+  li.menu-item {
     display: block;
-    // float: left;
     align-content: space-between;
     position: relative;
     text-decoration: none;
-    transition-duration: 0.5s;
     padding: 0.5rem 1rem;
     margin: 0;
+    width: 100%;
+    // border: 0.5px solid green;
+    @include media-breakpoint-up(lg) { 
+      width: auto;
+
+      transition-duration: 0.5s;
+    }
     a {
       text-decoration: none;
       color: $utsmokeytext;
       display: block;
+      // :before {
+      //   content: '';
+      //   position: absolute;
+      //   top: 0;
+      //   right: 0;
+      //   bottom: 0;
+      //   left: 0;
+      //   z-index: 1;
+      // }
     }
     &.current-menu-item,
     &.current-menu-ancestor {
@@ -62,32 +82,45 @@ nav.nav-primary {
     &:hover {
       background: $utcoolrock;
       cursor: pointer;
-      height: 3rem;
+      // height: 3rem;
     }
     ul {
       background: $utgray1;
-      display: none;
+      display: flex;
       left: 0;
       margin: calc($spacer / 2) 0 0 0;
       min-width: 10rem;
-      opacity: 0;
       padding-left: 0;
-      position: absolute;
-      transition: all 0.5s ease;
-      visibility: hidden;
-      z-index: 10;
-      li ul {
+
+      @include media-breakpoint-up(lg) { 
         display: none;
+        opacity: 0;
+
+        // transition: all 0.5s ease;
+        visibility: hidden;
+        position: absolute;
+
+        z-index: 10;
       }
     }
 
-    .menu-item-has-children {
-      border: 1px solid red;
-    }
+    .sub-menu {
+      display: inline-block;
+      height: auto;
+      margin: 0 -1rem -1rem -1rem;
+      width: calc(100% + 2rem);
+      margin-bottom: -1rem;
 
-    li {
-      clear: both;
-      width: 100%;
+      border-bottom: 2px solid $utgray1;
+      @include media-breakpoint-up(lg) { 
+        margin: 0.5rem 0 -1rem 0;
+      }
+
+      li.menu-item {
+        padding-left: calc($spacer * 2);
+        font-size: 90%;
+        z-index: 12;
+      }
     }
   }
 
@@ -96,30 +129,60 @@ nav.nav-primary {
     font-weight: bold;
   }
 
-  li:hover > ul,
-  li:focus-within > ul,
-  li ul:hover,
-  li ul:focus {
-    visibility: visible;
-    opacity: 1;
-    display: block;
-    position: absolute;
-    top: 2.5rem;
-  }
-  li ul li {
-    height: auto;
-    padding: 0.5rem 1rem;
-    &:hover {
-      background: $utcoolrock;
-      cursor: pointer;
+  @include media-breakpoint-up(lg) { 
+    li:hover > ul,
+    li:focus-within > ul,
+    li ul:hover,
+    li ul:focus {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+      position: absolute;
+      // top: 2.5rem;
+    }
+    li ul li {
       height: auto;
-      width: 100%;
+      padding: 0.5rem 1rem;
+      &:hover {
+        background: $utcoolrock;
+        @media screen and (min-width: 900px) {
+          transition: all 0.5s ease;
+        }
+        cursor: pointer;
+        height: auto;
+        width: 100%;
+      }
     }
   }
   li.current-menu-item {
     background: $utgray2;
-    border-bottom: 2px solid $utorange;
+    // border-bottom: 2px solid $utorange;
+    @include media-breakpoint-up(lg) {
+      transition: all 0.5s ease;
+    }
     // width: 100%;
     // text-align: center;
   }
+}
+
+.btn-mobileNav {
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  display: block;
+  @include media-breakpoint-up(lg)  {
+    border: 2px solid red !important;
+    display: none;
+  }
+}
+
+.btn-mobileNav .collapse {
+  nav.nav-primary {
+    display: none;
+  }
+}
+
+.navLabel {
+  color: $utlinkriver;
+  font-size: var(--wp--custom--typography--tiny);
 }

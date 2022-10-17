@@ -171,9 +171,84 @@
   }
 }
 
-.introductionCard {
-  padding: calc($spacer * 10) !important;
-  .has-background {
-    padding: calc($spacer * 10) !important;
+/* - - - - - - - - - - - - */
+/* profileCard */
+/* - - - - - - - - - - - - */
+.profileCardContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  align-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 3rem;
+  position: relative;
+}
+.profileCardContainer > * {
+  flex-basis: 100%;
+  @media (min-width: 1200px) {
+    flex-basis: 49%;
+    align-items: stretch;
   }
 }
+
+.profileCard {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  align-content: stretch;
+  background-color: #fafafa;
+  border-radius: 0 30px 30px 0;
+  height: 100%;
+}
+
+.profileCard > * {
+  flex-basis: 50%;
+}
+
+.profileHeadshot {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+}
+.profileHeadshot figure {
+  object-fit: cover;
+  padding: 0;
+  margin: 0;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+.profileTitle {
+  // font-style: italic;
+  // text-transform: uppercase;
+}
+
+.profileName {
+  font-size: 1.75rem;
+  width: auto;
+  box-shadow: inset 0 -1px #ff8200;
+  padding-bottom: calc($spacer * 2);
+  margin-bottom: 1rem;
+}
+.profilePhone {
+  font-size: 1.75rem;
+}
+.profileIntro {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+.profileStrengths {
+  // text-transform: uppercase;
+}
+

@@ -8,10 +8,6 @@
 
 ?>
 
-<!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size"><em><strong>Article with Quote</strong></em> (not full width)</p>
-<!-- /wp:paragraph -->
-
 <!-- wp:group -->
 <div class="wp-block-group"><!-- wp:spacer -->
 <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>

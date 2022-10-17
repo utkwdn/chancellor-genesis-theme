@@ -49,6 +49,7 @@ function utkchancellor_sidebar() {
 // UT Filters to add HTML
 // ===============================================================
 
+require_once ( 'functions/filter-mobile-nav.php' );
 require_once ( 'functions/filter-region-headsearch.php' );
 require_once ( 'functions/filter-region-footer.php' );
 
