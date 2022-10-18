@@ -34,7 +34,7 @@ add_filter( 'genesis_attr_nav-primary', 'utkchancellor_navbar', 20 );
 function utkchancellor_navbar( $attributes ) {
 		// class, id, itemscope, itemtype, etc.
 		$attributes['id']  = 'offcanvasResponsive';
-		$attributes['class']  = 'offcanvas-lg offcanvas-start';
+		$attributes['class']  = 'offcanvas-lg offcanvas-start nav-primary';
 		$attributes['tabindex']  = '-1';
 		$attributes['aria-labelledby']  = 'offcanvasResponsiveLabel';
 	return $attributes;

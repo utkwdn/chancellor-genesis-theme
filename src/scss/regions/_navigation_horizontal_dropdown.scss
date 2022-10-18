@@ -4,7 +4,7 @@
 
 nav.nav-primary {
   // right: -100vw;
-  // background: $utgray1;
+  background-color: $utgray1 !important;
   display: flex;
   align-items: stretch;
   width: 100vw;
@@ -41,7 +41,7 @@ nav.nav-primary {
   align-items: stretch;
   // gap: calc($spacer * 1);
   margin-left: calc($spacer / 2);
-  @include media-breakpoint-up(lg) { 
+  @include media-breakpoint-up(lg) {
     // border: 2px solid red;
     background: $utgray1;
     flex-direction: row;
@@ -56,7 +56,7 @@ nav.nav-primary {
     margin: 0;
     width: 100%;
     // border: 0.5px solid green;
-    @include media-breakpoint-up(lg) { 
+    @include media-breakpoint-up(lg) {
       width: auto;
 
       transition-duration: 0.5s;
@@ -65,15 +65,15 @@ nav.nav-primary {
       text-decoration: none;
       color: $utsmokeytext;
       display: block;
-      // :before {
-      //   content: '';
-      //   position: absolute;
-      //   top: 0;
-      //   right: 0;
-      //   bottom: 0;
-      //   left: 0;
-      //   z-index: 1;
-      // }
+      :before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+      }
     }
     &.current-menu-item,
     &.current-menu-ancestor {
@@ -92,7 +92,7 @@ nav.nav-primary {
       min-width: 10rem;
       padding-left: 0;
 
-      @include media-breakpoint-up(lg) { 
+      @include media-breakpoint-up(lg) {
         display: none;
         opacity: 0;
 
@@ -112,7 +112,7 @@ nav.nav-primary {
       margin-bottom: -1rem;
 
       border-bottom: 2px solid $utgray1;
-      @include media-breakpoint-up(lg) { 
+      @include media-breakpoint-up(lg) {
         margin: 0.5rem 0 -1rem 0;
       }
 
@@ -129,7 +129,7 @@ nav.nav-primary {
     font-weight: bold;
   }
 
-  @include media-breakpoint-up(lg) { 
+  @include media-breakpoint-up(lg) {
     li:hover > ul,
     li:focus-within > ul,
     li ul:hover,
@@ -170,8 +170,7 @@ nav.nav-primary {
   border: none;
   margin-left: auto;
   display: block;
-  @include media-breakpoint-up(lg)  {
-    border: 2px solid red !important;
+  @include media-breakpoint-up(lg) {
     display: none;
   }
 }
