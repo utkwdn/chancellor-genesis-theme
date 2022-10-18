@@ -177,6 +177,7 @@
 .profileCardContainer {
   position: relative;
   width: 100%;
+  border: 2px solid red;
   display: flex;
   align-items: stretch;
   align-content: space-around;
@@ -188,6 +189,8 @@
 }
 .profileCardContainer > * {
   flex-basis: 100%;
+
+  align-content: stretch;
   @media (min-width: 1200px) {
     flex-basis: 49%;
     align-items: stretch;
@@ -251,4 +254,3 @@
 .profileStrengths {
   // text-transform: uppercase;
 }
-

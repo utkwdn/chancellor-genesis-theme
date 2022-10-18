@@ -434,7 +434,7 @@
 ul.chancellorFeaturePost {
   li {
     border-bottom: none;
-    text-align: center;
+    text-align: left;
     padding-bottom: calc($spacer * 3);
     &:after {
       content: '';
@@ -450,13 +450,12 @@ ul.chancellorFeaturePost {
       margin: 3rem 0 2rem 0;
     }
     // &:before {
-    //   content: 'READ MORE >';
+    //   content: 'READ MORE';
     //   font-size: var(--wp--custom--typography--tiny);
     //   position: absolute;
     //   bottom: calc($spacer * 5);
     //   display: block;
     //   width: 100%;
-
     // }
     a {
       font-size: $h4-font-size;
@@ -476,6 +475,46 @@ ul.chancellorFeaturePost {
       &:hover {
         color: $utlinkriver;
       }
+    }
+  }
+
+  &.wp-block-latest-posts__list.is-grid {
+    display: flex;
+    flex-direction: row !important;
+    li {
+      flex: 1 1 100%;
+      text-align: left;
+      &:after {
+        content: '';
+        display: block;
+        // height: 2px;
+        border: 2px solid $utorange;
+        width: 16%;
+        margin: 0 40%;
+        margin: 10px;
+        background: $utorange;
+        position: relative;
+        left: 42%;
+        margin: 3rem 0 2rem 0;
+      }
+      @media screen and (min-width: 900px) {
+        flex: 1 1 auto;
+        border-right: 2px solid $utorange;
+        &:after {
+          content: '';
+          display: none;
+        }
+      }
+      time {
+        padding-top: $spacer;
+
+        &:before {
+          content: '' !important;
+        }
+      }
+    }
+    :last-child {
+      border-right: none;
     }
   }
 }
