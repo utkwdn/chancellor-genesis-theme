@@ -109,7 +109,7 @@
           "name": "Vertical white to clear"
         }
       ],
-      "customGradient": true,
+      "customGradient": false,
       "defaultGradients": false
     },
     "layout": {
