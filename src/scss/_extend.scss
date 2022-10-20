@@ -12,7 +12,7 @@
 }
 
 .title-area {
-  // border: 1px solid red;
+  padding-top: calc($spacer / 2);
 }
 
 .universal-navigation {
@@ -249,4 +249,8 @@ h1.adaOrange {
 }
 .fc-3 {
   flex-shrink: 2;
+}
+
+.two-columns {
+  column-count: 2;
 }

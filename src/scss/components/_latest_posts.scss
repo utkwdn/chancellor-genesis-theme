@@ -507,6 +507,7 @@ ul.chancellorFeaturePost {
       }
       time {
         padding-top: $spacer;
+        margin-left: -0.5rem;
 
         &:before {
           content: '' !important;

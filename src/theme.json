@@ -89,6 +89,11 @@
           "name": "Horizontal clear to solid orange"
         },
         {
+          "slug": "clear-to-white",
+          "gradient": "linear-gradient(180deg,rgba(255,255,255,0) 43%,rgb(255,255,255) 43%)",
+          "name": "Horizontal clear to solid white"
+        },
+        {
           "slug": "light-grey-to-white",
           "gradient": "linear-gradient(90deg,rgb(245,245,245) 73%,rgb(255,255,255) 43%)",
           "name": "Vertical light grey to solid white"
