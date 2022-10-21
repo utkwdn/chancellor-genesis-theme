@@ -254,3 +254,29 @@ h1.adaOrange {
 .two-columns {
   column-count: 2;
 }
+
+.cliftonStrengthsList {
+  // add orange squares between each of the strengths
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  list-style: none;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  li {
+    &:after {
+      content: '■';
+      color: $utorange;
+      position: relative;
+      padding: 0.5rem;
+    }
+  }
+  :last-child {
+    &:after {
+      // remove spacing square from last element
+      content: none !important;
+    }
+  }
+}

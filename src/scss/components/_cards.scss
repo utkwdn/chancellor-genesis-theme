@@ -175,7 +175,8 @@
 /* profileCard */
 /* - - - - - - - - - - - - */
 .profileCardContainer,
-.bioCardContainer {
+.bioCardContainer,
+.subjectCardContainer {
   position: relative;
   width: 100%;
   display: flex;
@@ -185,10 +186,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: calc($spacer * 4);
-
   position: relative;
 }
-.profileCardContainer > * {
+.profileCardContainer > *,
+.subjectCardContainer > * {
   flex-basis: 100%;
 
   align-content: stretch;
@@ -310,4 +311,33 @@
   z-index: 2 !important;
   display: block;
   position: relative;
+}
+.subjectCardContainer {
+  gap: 3vw;
+}
+
+.subjectCard {
+  border-top: 6px solid $utorange;
+  padding: 0 calc($spacer * 3);
+  flex-direction: column;
+  gap: 2%;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  background-color: #fafafa;
+  border-radius: 0 0 30px 0;
+  height: 100%;
+  @extend .clipCorner-br-container;
+  @media screen and (min-width: 900px) {
+    flex-basis: 48%;
+    flex-wrap: nowrap;
+  }
+  h2,
+  h3 {
+    // font-size: 80%;
+  }
+  p + .wp-block-buttons {
+    margin: calc($spacer * 3) 0 calc($spacer * 4);
+  }
 }
