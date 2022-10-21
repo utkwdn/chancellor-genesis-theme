@@ -259,6 +259,7 @@ h1.adaOrange {
   // add orange squares between each of the strengths
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   position: relative;
   list-style: none;
   justify-content: center;
