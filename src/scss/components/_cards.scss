@@ -176,7 +176,8 @@
 /* - - - - - - - - - - - - */
 .profileCardContainer,
 .bioCardContainer,
-.subjectCardContainer {
+.subjectCardContainer,
+.nameCardContainer {
   position: relative;
   width: 100%;
   display: flex;
@@ -204,13 +205,25 @@
 
   align-content: stretch;
   @media (min-width: 1200px) {
-    flex-basis: 1000%;
+    flex-basis: 100%;
     align-items: stretch;
   }
 }
 
+.nameCardContainer {
+  column-gap: 1%;
+}
+.nameCardContainer > * {
+  flex-basis: 100%;
+  align-content: stretch;
+  @media (min-width: 1200px) {
+    flex-basis: 30%;
+    align-items: stretch;
+  }
+}
 .profileCard,
-.bioCard {
+.bioCard,
+.nameCard {
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -218,6 +231,10 @@
   background-color: #fafafa;
   border-radius: 0 0 30px 0;
   height: 100%;
+}
+.nameCard {
+  padding: 2rem;
+  flex-direction: column;
 }
 
 .bioCard {
@@ -266,7 +283,7 @@
   align-items: flex-start;
   margin: 0;
   padding: 2rem;
-  text-align: center;
+  // text-align: center;
 }
 
 .bioInfo {
