@@ -36,7 +36,8 @@
   }
 }
 
-.btn-link {
+.btn-link,
+p.fancyLink a {
   // font-size: 1.2rem;
   /* default button size is $font-size-base: 1.25 So removing override for now since it is close, allows btn-lg and btn-sm to take affect */
   line-height: 1.3rem; // keeps > in correct alignment

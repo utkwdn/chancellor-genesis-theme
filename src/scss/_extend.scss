@@ -262,21 +262,114 @@ h1.adaOrange {
   flex-wrap: wrap;
   position: relative;
   list-style: none;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+  text-align: left;
   padding: 0;
+  margin-bottom: calc($spacer * 2);
+  gap: calc($spacer / 4) calc($spacer * 1.5);
+
+  color: #707070;
+  // color: var(--wp--preset--color--smokey;
   li {
-    &:after {
-      content: '■';
-      color: $utorange;
-      position: relative;
-      padding: 0.5rem;
-    }
+    // &:after {
+    //   content: '■';
+    //   color: $utorange;
+    //   position: relative;
+    //   padding: 0.5rem;
+
+    // }
+    font-weight: $font-weight-bold;
+    // text-transform: uppercase;
+    font-size: $font-size-base;
   }
-  :last-child {
-    &:after {
-      // remove spacing square from last element
-      content: none !important;
-    }
+  // &:last-child {
+  //   &:after {
+  //     content: url('https://images.utk.edu/wds/clifton-strengths-icon.svg');
+  //     padding-top: 0.25rem;
+  //     align-self: center;
+  //     display: inline-block;
+  //     position: relative;
+  //     left: 0;
+
+  //     margin-left: 0.5rem;
+  //   }
+  // }
+  &:before {
+    content: url('https://images.utk.edu/wds/clifton-strengths-icon.svg');
+    padding-top: 0.25rem;
+    align-self: center;
+    display: block;
+    position: relative;
+    left: 0;
+    flex-basis: 100%;
+    margin-top: $spacer;
+  }
+}
+.removeCliftonIcon {
+  &:before {
+    content: none;
+  }
+}
+
+.cliftonContext {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: $h6-font-size;
+  flex-direction: row;
+  margin-top: calc($spacer * 2.25);
+  // a {
+  //   color: $utsmokey;
+  //   &:hover {
+  //     color: #114c81;
+  //   }
+  // }
+
+  &:after {
+    content: url('https://images.utk.edu/wds/clifton-strengths-icon.svg');
+    padding-top: 0.25rem;
+    align-self: center;
+    display: block;
+    position: relative;
+    left: 0;
+
+    margin-left: 0.5rem;
+  }
+}
+
+// styling to add to text that has been linked in the page. Adds animated > on hover
+.fancyLink a {
+  // font-size: 1.2rem;
+  /* default button size is $font-size-base: 1.25 So removing override for now since it is close, allows btn-lg and btn-sm to take affect */
+  line-height: 1.3rem; // keeps > in correct alignment
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  margin: 1.5rem 0;
+  padding: 0 0.5rem 0.5rem 0;
+  box-shadow: inset 0px -1px $utorange;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.01rem;
+  text-align: right;
+  &:after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='22' fill='%23ff8200' viewBox='0 0 25 26' %3E%3Cpath d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z' /%3E%3C/svg%3E");
+    margin-left: 0.5rem;
+    display: inline-block;
+    position: absolute;
+    transition: all 0.2s ease-out;
+  }
+  &:hover {
+    text-decoration: none;
+    box-shadow: inset 0px -1px $utlinkriver;
+  }
+  &:hover:after {
+    margin-left: 0.7rem;
+  }
+  .bi {
+    /* turning off any chosen icons */
+    display: none;
   }
 }
