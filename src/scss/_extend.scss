@@ -105,6 +105,11 @@
     0% 100%
   );
 }
+.clipCorner-br-container-sm {
+  @extend .clipCorner-br-container;
+
+  --notchSize: 2.5vw !important;
+}
 .clipCorner-br img {
   @extend .clipCorner-br-container;
 }
@@ -281,7 +286,7 @@ h1.adaOrange {
     // }
     font-weight: $font-weight-bold;
     // text-transform: uppercase;
-    font-size: $font-size-base;
+    font-size: $font-size-sm;
   }
   // &:last-child {
   //   &:after {
