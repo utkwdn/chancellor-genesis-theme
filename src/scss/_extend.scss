@@ -344,6 +344,13 @@ h1.adaOrange {
   }
 }
 
+h3.quietHeading {
+  text-transform: uppercase;
+  font-size: $h6-font-size;
+  margin-top: calc($spacer * 2.25);
+  font-weight: $font-weight-normal;
+}
+
 // styling to add to text that has been linked in the page. Adds animated > on hover
 .fancyLink a {
   // font-size: 1.2rem;
@@ -377,4 +384,36 @@ h1.adaOrange {
     /* turning off any chosen icons */
     display: none;
   }
+}
+
+.localist-widget {
+  .lwe {
+    margin-bottom: 3rem;
+    // list element
+    // list-style: none;
+    list-style: url('https://images.utk.edu/wds/torch-icon.svg') !important;
+
+    .lwn {
+      span {
+        // date group
+        font-weight: $font-weight-bold;
+        color: var(--wp--preset--color--smokey);
+        color: #707070;
+      }
+
+      display: flex;
+      flex-direction: column;
+      a:link {
+        font-style: italic;
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    .lwl {
+      font-size: $font-size-sm;
+    }
+  }
+}
+#lclst_widget_footer {
+  display: none !important;
 }
