@@ -211,7 +211,9 @@
 }
 
 .nameCardContainer {
-  column-gap: 1%;
+  column-gap: 5%;
+  justify-content: flex-start;
+  margin-bottom: calc($spacer * 6);
 }
 .nameCardContainer > * {
   flex-basis: 100%;
@@ -230,13 +232,26 @@
   align-content: stretch;
   background-color: #fafafa;
   border-radius: 0 0 30px 0;
+  // border-radius is being overwritten below. We might use this instead of the angle in WDS?
   height: 100%;
 }
 .nameCard {
   padding: 2rem;
   flex-direction: column;
+  align-items: flex-start;
+  @extend .clipCorner-br-container-sm;
+  h3 {
+    font-size: 1.75rem;
+    width: auto;
+    display: block;
+    box-shadow: inset 0 -2px #ff8200;
+    padding-bottom: calc($spacer * 2);
+    margin-bottom: 1rem;
+  }
 }
-
+.profileCard {
+  @extend .clipCorner-br-container-sm;
+}
 .bioCard {
   @extend .clipCorner-br-container;
 }
@@ -331,24 +346,29 @@
   position: relative;
 }
 .subjectCardContainer {
-  gap: 3vw;
+  // column-gap: 2%;
+  width: 100%;
+  //Need to FIX for responsive
 }
 
 .subjectCard {
   border-top: 6px solid $utorange;
   padding: 0 calc($spacer * 3);
-  flex-direction: column;
-  gap: 2%;
   display: flex;
+  flex-direction: column;
+  // gap: 2%;
   justify-content: stretch;
   align-items: stretch;
   align-content: stretch;
   background-color: #fafafa;
-  border-radius: 0 0 30px 0;
+  // border-radius: 0 0 30px 0;
+  // border-radius is being overwritten with clip corner – might use rounded in WDS instead?
   height: 100%;
-  @extend .clipCorner-br-container;
+  @extend .clipCorner-br-container-sm;
   @media screen and (min-width: 900px) {
-    flex-basis: 48%;
+    flex-basis: 46%;
+    flex-basis: calc((98% - 3rem) / 2);
+    //subtracting 3rem due to bs-gutter-x which was breaking the smallest of this view
     flex-wrap: nowrap;
   }
   h2,
