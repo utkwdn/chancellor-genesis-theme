@@ -244,7 +244,7 @@
     "blocks": {
       "core/button": {
         "color": {
-          "background": "var(--wp--preset--color--smokeyX)",
+          "background": "var(--wp--preset--color--white)",
           "text": "var(--wp--preset--color--smokeyX)"
         },
         "border": {
