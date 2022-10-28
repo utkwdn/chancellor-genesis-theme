@@ -9,14 +9,18 @@
   body.content-sidebar {
     .content-sidebar-wrap {
       display: flex;
-      justify-items: center;
+      justify-items: flex-start;
       align-items: flex-start;
+      column-gap: calc($spacer * 2);
       .widget-area {
-        flex: 1 1 0;
+        // flex: 1;
       }
       main.content {
-        flex: 2 1 0;
-        margin-right: $spacer * 3;
+        flex: 3 1 auto;
+        display: flex;
+        column-gap: calc($spacer * 3);
+        // margin-right: $spacer * 5;
+        // border: 1px solid yellowgreen;
       }
     }
 
@@ -27,7 +31,7 @@
         }
         main.content {
           order: 1;
-          margin-left: $spacer * 3;
+          // margin-left: $spacer * 3;
         }
       }
     }
@@ -37,7 +41,7 @@
           margin-right: 0;
         }
         main.content {
-          margin-left: $spacer * 3;
+          // margin-left: $spacer * 3;
         }
       }
     }

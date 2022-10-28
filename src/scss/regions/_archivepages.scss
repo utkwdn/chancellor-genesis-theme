@@ -1,45 +1,125 @@
 .archive {
-    .content {
-        @include media-breakpoint-up(xl) {
-          display: flex;
-          flex-wrap: wrap;
-        }
-        nav[aria-label="breadcrumb"] {
-            width: 100%;
-        }
-        .post {
-            box-shadow: 0px 5px 30px 0 #0000001a;
-            border: 1px solid $utgray1;
-            margin: calc($spacer / 2);
-            @include media-breakpoint-up(xl) {
-                max-width: calc((100% / 2) - #{$spacer});
-            }
-            padding: $spacer;
-            .entry-title {
-                font-size: $font-size-xlg;
-                margin: calc($spacer / 2) 0;
-                line-height: 1.1;
-            }
-            .entry-title-link {
-                color: $utsmokey;
-            }
-            .entry-meta {
-                font-size: $font-size-sm;
-            }
-            .entry-footer {
-                @extend .orange-mark;
-            }
-        }
-        .pagination ul {
-            width: 100%;
-            @extend .pagination;
-            li {
-                @extend .page-item;
-                a {
-                    @extend .page-link;
-                }
-            }
-        }
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: calc($spacer * 3);
+    gap: calc($spacer * 3);
+    @include media-breakpoint-up(xl) {
+      flex-direction: row;
     }
-}
 
+    .post {
+      //   box-shadow: 0px 5px 30px 0 #0000001a;
+      background-color: $utgray1;
+      margin: calc($spacer / 2);
+      @extend .clipCorner-br-container-sm;
+      //   padding-top: calc($spacer * 8);
+      padding: calc($spacer * 8) calc($spacer * 3) calc($spacer * 3);
+      @include media-breakpoint-up(xl) {
+        flex: 1 1 40%;
+
+        // max-width: calc((100% / 2) - #{$spacer});
+      }
+      &:first-of-type {
+        flex-basis: 100%;
+
+        @include media-breakpoint-up(xl) {
+          .entry-content {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: calc($spacer * 1.5);
+            column-gap: calc($spacer * 3);
+            & > * {
+              flex-basis: 50%;
+            }
+          }
+        }
+      }
+      .entry-title {
+        font-size: calc($h2-font-size * 0.6);
+        margin: calc($spacer / 2) 0;
+        line-height: 1.1;
+        font-weight: $font-weight-bold;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          width: 90px;
+          margin-left: 0;
+          height: 6px;
+          background-color: $utorange;
+          top: -3rem;
+          bottom: auto;
+        }
+      }
+      .entry-title-link {
+        color: $utsmokey;
+        text-decoration: none;
+      }
+      .entry-meta {
+        time {
+          font-size: var(--wp--custom--typography--tiny);
+          text-transform: uppercase;
+          margin-bottom: calc($spacer * 2);
+          display: block;
+          font-weight: $font-weight-light;
+        }
+      }
+      .entry-content {
+        margin-bottom: calc($spacer * 1.5);
+        @include media-breakpoint-up(xl) {
+          .post-image {
+            margin-bottom: calc($spacer * 3);
+          }
+        }
+      }
+      .entry-footer {
+        // @extend .orange-mark;
+        position: relative;
+        padding: calc($spacer * 1.5) 0;
+        &:before {
+          content: '';
+          position: absolute;
+          margin: 0 auto;
+          width: 100%;
+          height: 2px;
+          background-color: $utgray2;
+          bottom: auto;
+        }
+        p {
+          margin-top: $spacer;
+          .entry-categories {
+            font-size: var(--wp--custom--typography--tiny);
+
+            a {
+              border: 1px solid $utsmokey;
+              border-radius: 0.3rem;
+              color: #707070;
+              text-decoration: none;
+              padding: calc($spacer * 0.3) calc($spacer * 0.5);
+              background-color: white;
+
+              //   text-transform: uppercase;
+              &:hover {
+                background-color: #707070;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .pagination ul {
+      width: 100%;
+      @extend .pagination;
+      li {
+        @extend .page-item;
+        a {
+          @extend .page-link;
+        }
+      }
+    }
+  }
+}
