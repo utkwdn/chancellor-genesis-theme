@@ -27,10 +27,12 @@
   max-width: 100%;
 }
 
-.breadcrumb {
+nav[aria-label='breadcrumb'] {
+  // border: 1px solid greenyellow;
   margin-bottom: calc($spacer * 2);
   font-size: calc(var(--wp--custom--typography--small) * 0.8);
   color: $utsmokey;
+  width: 100%; // makes breadcrumb full width on archive page inside flex
 }
 .breadcrumb-link-wrap {
   // @extend .breadcrumb-item;

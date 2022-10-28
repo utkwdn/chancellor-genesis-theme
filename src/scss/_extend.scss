@@ -136,6 +136,7 @@ h1.adaOrange {
 
   // object-fit: cover;
 }
+
 .tnTop {
   position: absolute;
   object-fit: cover;
@@ -156,6 +157,11 @@ h1.adaOrange {
   transform: scale(400);
   transform-origin: top left;
   object-fit: cover;
+}
+.flip {
+  transform: scaleX(-1);
+  right: 0;
+  left: auto;
 }
 
 .fullWidthBar-end {
@@ -344,11 +350,15 @@ h1.adaOrange {
   }
 }
 
-h3.quietHeading {
-  text-transform: uppercase;
-  font-size: $h6-font-size;
-  margin-top: calc($spacer * 2.25);
-  font-weight: $font-weight-normal;
+.fancyLinkGroup {
+  display: flex;
+  flex-direction: row;
+  gap: calc($spacer * 3);
+  margin-bottom: $spacer;
+}
+.fancyLinkGroup > * {
+  width: auto;
+  display: flex;
 }
 
 // styling to add to text that has been linked in the page. Adds animated > on hover
@@ -359,7 +369,7 @@ h3.quietHeading {
   text-decoration: none;
   position: relative;
   display: inline-block;
-  margin: 1.5rem 0;
+  margin: calc($spacer * 0.5) 0;
   padding: 0 0.5rem 0.5rem 0;
   box-shadow: inset 0px -1px $utorange;
   font-style: italic;
@@ -416,4 +426,25 @@ h3.quietHeading {
 }
 #lclst_widget_footer {
   display: none !important;
+}
+
+.newsIntro p.thoughtIntroText {
+  color: #333333;
+}
+.newsIntro .thoughtButton {
+  color: #333333;
+}
+
+.oa-thick-bar {
+  width: 80%;
+  height: 1.75rem;
+  background-color: $utorange;
+  opacity: 1;
+  margin: 4rem 0;
+
+  margin-left: -4rem !important;
+  @media screen and (min-width: 800px) {
+    width: 70%;
+    width: 24rem;
+  }
 }

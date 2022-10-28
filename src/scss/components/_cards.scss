@@ -231,6 +231,7 @@
   align-items: stretch;
   align-content: stretch;
   background-color: #fafafa;
+  background-color: $utgray1;
   border-radius: 0 0 30px 0;
   // border-radius is being overwritten below. We might use this instead of the angle in WDS?
   height: 100%;
@@ -361,6 +362,7 @@
   align-items: stretch;
   align-content: stretch;
   background-color: #fafafa;
+  background-color: $utgray1;
   // border-radius: 0 0 30px 0;
   // border-radius is being overwritten with clip corner – might use rounded in WDS instead?
   height: 100%;
@@ -371,9 +373,11 @@
     //subtracting 3rem due to bs-gutter-x which was breaking the smallest of this view
     flex-wrap: nowrap;
   }
-  h2,
+  h2 {
+    font-size: calc($h2-font-size * 0.6);
+  }
   h3 {
-    // font-size: 80%;
+    font-size: calc($h3-font-size * 0.6);
   }
   p + .wp-block-buttons {
     margin: calc($spacer * 3) 0 calc($spacer * 4);

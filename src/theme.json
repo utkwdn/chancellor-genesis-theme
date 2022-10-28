@@ -140,6 +140,11 @@
           "name": "Horizontal clear to solid white"
         },
         {
+          "slug": "clear-to-light-grey",
+          "gradient": "linear-gradient(180deg,rgba(255,255,255,0) 43%,rgb(245,245,245) 43%)",
+          "name": "Horizontal clear to light grey"
+        },
+        {
           "slug": "light-grey-to-white",
           "gradient": "linear-gradient(90deg,rgb(245,245,245) 73%,rgb(255,255,255) 43%)",
           "name": "Vertical light grey to solid white"
@@ -256,6 +261,15 @@
     },
     "color": {
       "text": "var(--wp--preset--color--smokey)"
+    },
+
+    "elements": {
+      "button": {
+        "color": {
+          "text": "var(--wp--preset--color--orange)",
+          "background": "var(--wp--preset--color--white)"
+        }
+      }
     }
   }
 }
