@@ -2,16 +2,25 @@
 //  border-top: 0.25rem solid $utorange;
 //  }
 .site-title {
-  font-size: $font-size-lg;
-  font-size: var(--wp--custom--typography--large);
+  // font-size: $font-size-lg;
+  font-size: $h3-font-size;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
   margin: 0.25 * $spacer;
+  position: relative;
   a {
     background-size: $spacer * 2 $spacer * 2 !important;
     color: $utsmokey;
-    padding: $spacer 0 $spacer $spacer * 4;
+    // padding: 0 0 $spacer calc($spacer * 4.1);
+    padding: $spacer calc($spacer * 4.1);
+    background-position: center left;
     text-decoration: none;
     font-weight: $font-weight-bolder;
+    font-weight: $font-weight-light;
+    line-height: calc($headings-line-height * 1.1);
+    position: relative;
   }
 }
 #utk_powert {
