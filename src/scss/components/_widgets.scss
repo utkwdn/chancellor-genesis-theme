@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     row-gap: calc($spacer * 2);
+    align-items: flex-start;
     .cat-item {
       //controls the look of archived categories on right hand side of page
       //   background-color: $utsmokey;
@@ -26,6 +27,7 @@
       width: fit-content;
       margin: 0;
       padding: 0;
+      align-self: flex-start;
 
       a {
         border: 1px solid $utsmokey;
@@ -34,7 +36,9 @@
         text-decoration: none;
         padding: calc($spacer * 0.3) calc($spacer * 0.5);
         background-color: white;
-        // display: block;
+        display: block;
+        margin-right: auto;
+        // width: min-content;
         // text-transform: uppercase;
         &:hover {
           background-color: #707070;

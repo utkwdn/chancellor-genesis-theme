@@ -1,5 +1,6 @@
 .sidebar-primary {
   //   border: 1px solid red;
-  flex: 2 0 auto;
+  flex: 2 1 auto;
+  align-items: flex-start;
   padding-top: calc($spacer * 3);
 }
