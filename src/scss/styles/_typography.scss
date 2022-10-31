@@ -55,9 +55,10 @@ h1,
 // }
 
 h1 {
-  // margin-top: calc($spacer * 6);
-  margin-bottom: calc($spacer * 2);
+  margin-top: calc($spacer * 4);
+  margin-bottom: calc($spacer * 3);
   text-transform: uppercase;
+  max-width: 22ch;
 }
 h2 {
   margin-top: calc($spacer * 3.2);
