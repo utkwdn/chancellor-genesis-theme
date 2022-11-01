@@ -130,3 +130,7 @@ h3.quietHeading {
 p.has-medium-font-size {
   margin-bottom: calc($spacer * 2);
 }
+
+.titleWidthFix {
+  max-width: none !important;
+}

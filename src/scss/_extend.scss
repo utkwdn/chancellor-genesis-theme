@@ -466,10 +466,3 @@ h1.adaOrange {
     flex-wrap: nowrap !important;
   }
 }
-.width-100m-60w {
-  // max-width: 100% !important;
-  @media screen and (min-width: 700px) {
-    max-width: 60% !important;
-    border: 1px solid green;
-  }
-}
