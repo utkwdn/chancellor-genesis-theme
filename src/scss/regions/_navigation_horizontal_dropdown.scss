@@ -1,6 +1,7 @@
 .site-header .wrap {
   @extend .d-flex;
   align-items: center;
+  // padding: calc($spacer * 0.5) 0;
 }
 
 nav.nav-primary {
@@ -16,6 +17,8 @@ nav.nav-primary {
     padding: 0;
     margin: 0;
     display: flex;
+
+    justify-content: flex-end;
     align-items: center;
     align-content: center;
     // background-color: red;

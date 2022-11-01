@@ -340,12 +340,25 @@
   // text-transform: uppercase;
 }
 
-.thoughtCard {
+.thoughtCardContainer {
+  // controls the top of the Messages and News page
   margin-top: -5rem;
   z-index: 2 !important;
   display: block;
   position: relative;
+  @media screen and (min-width: 700px) {
+    max-width: 60%;
+    margin: 0 auto;
+  }
 }
+.thoughtCard {
+  max-width: 100% !important;
+  @media screen and (min-width: 700px) {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
 .subjectCardContainer {
   // column-gap: 2%;
   width: 100%;

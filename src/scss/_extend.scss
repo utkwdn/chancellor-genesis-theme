@@ -458,3 +458,18 @@ h1.adaOrange {
   z-index: 1;
   position: relative;
 }
+
+.mobileWrap {
+  // used for row block to allow items to wrap instead of shrink to tiny!
+  flex-wrap: wrap !important;
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap !important;
+  }
+}
+.width-100m-60w {
+  // max-width: 100% !important;
+  @media screen and (min-width: 700px) {
+    max-width: 60% !important;
+    border: 1px solid green;
+  }
+}
