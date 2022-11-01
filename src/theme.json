@@ -168,6 +168,7 @@
       "wideSize": "80vw"
     },
     "typography": {
+      "fluid": true,
       "dropCap": false,
       "fontFamilies": [
         {
@@ -224,7 +225,11 @@
         {
           "name": "X-Large",
           "size": "var(--wp--custom--typography--xlarge)",
-          "slug": "x-large"
+          "slug": "x-large",
+          "fluid": {
+            "min": "calc(var(--wp--custom--typography--scale) * 2.32)",
+            "max": "calc(var(--wp--custom--typography--scale) * 3.16)"
+          }
         }
       ]
     },
