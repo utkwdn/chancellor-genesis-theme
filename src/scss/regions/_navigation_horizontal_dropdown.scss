@@ -4,171 +4,6 @@
   // padding: calc($spacer * 0.5) 0;
 }
 
-nav.nav-primary {
-  // right: -100vw;
-  background-color: $utgray1 !important;
-  display: flex;
-  align-items: stretch;
-  width: 100vw;
-  margin: 0 calc(50% - 50vw);
-  width: 100vw;
-  margin-bottom: calc($spacer);
-  ul {
-    padding: 0;
-    margin: 0;
-    display: flex;
-
-    justify-content: flex-end;
-    align-items: center;
-    align-content: center;
-    // background-color: red;
-    li {
-      // height: 3rem;
-      display: flex;
-      align-items: center;
-      // background-color: pink;
-    }
-  }
-}
-.genesis-nav-menu {
-  //background: $utgray1;
-  // font-size: calc($font-size-sm * 0.9);
-  font-size: var(--wp--custom--typography--default);
-  // border: 1px solid blue;
-  padding: $spacer 0;
-  list-style: none;
-  margin: 0;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: stretch;
-  // gap: calc($spacer * 1);
-  margin-left: calc($spacer / 2);
-  @include media-breakpoint-up(lg) {
-    // border: 2px solid red;
-    background: $utgray1;
-    flex-direction: row;
-  }
-
-  li.menu-item {
-    display: block;
-    align-content: space-between;
-    position: relative;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    margin: 0;
-    width: 100%;
-    // border: 0.5px solid green;
-    @include media-breakpoint-up(lg) {
-      width: auto;
-
-      transition-duration: 0.5s;
-    }
-    a {
-      text-decoration: none;
-      color: $utsmokeytext;
-      display: block;
-      :before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-      }
-    }
-    &.current-menu-item,
-    &.current-menu-ancestor {
-      background: $utcoolrock;
-    }
-    &:hover {
-      background: $utcoolrock;
-      cursor: pointer;
-      // height: 3rem;
-    }
-    ul {
-      background: $utgray1;
-      display: flex;
-      left: 0;
-      margin: calc($spacer / 2) 0 0 0;
-      min-width: 10rem;
-      padding-left: 0;
-
-      @include media-breakpoint-up(lg) {
-        display: none;
-        opacity: 0;
-
-        // transition: all 0.5s ease;
-        visibility: hidden;
-        position: absolute;
-
-        z-index: 10;
-      }
-    }
-
-    .sub-menu {
-      display: inline-block;
-      height: auto;
-      margin: 0 -1rem -1rem -1rem;
-      width: calc(100% + 2rem);
-      margin-bottom: -1rem;
-
-      border-bottom: 2px solid $utgray1;
-      @include media-breakpoint-up(lg) {
-        margin: 0.5rem 0 -1rem 0;
-      }
-
-      li.menu-item {
-        padding-left: calc($spacer * 2);
-        font-size: 90%;
-        z-index: 12;
-      }
-    }
-  }
-
-  li.current-menu-item a,
-  > li.current-menu-ancestor > a {
-    font-weight: bold;
-  }
-
-  @include media-breakpoint-up(lg) {
-    li:hover > ul,
-    li:focus-within > ul,
-    li ul:hover,
-    li ul:focus {
-      visibility: visible;
-      opacity: 1;
-      display: block;
-      position: absolute;
-      // top: 2.5rem;
-    }
-    li ul li {
-      height: auto;
-      padding: 0.5rem 1rem;
-      &:hover {
-        background: $utcoolrock;
-        @media screen and (min-width: 900px) {
-          transition: all 0.5s ease;
-        }
-        cursor: pointer;
-        height: auto;
-        width: 100%;
-      }
-    }
-  }
-  li.current-menu-item {
-    background: $utgray2;
-    // border-bottom: 2px solid $utorange;
-    @include media-breakpoint-up(lg) {
-      transition: all 0.5s ease;
-    }
-    // width: 100%;
-    // text-align: center;
-  }
-}
-
 .btn-mobileNav {
   background-color: transparent;
   border: none;
@@ -179,13 +14,167 @@ nav.nav-primary {
   }
 }
 
-.btn-mobileNav .collapse {
-  nav.nav-primary {
-    display: none;
-  }
-}
+// .btn-mobileNav .collapse {
+//   nav.nav-primary {
+//     display: none;
+//   }
+// }
 
 .navLabel {
   color: $utlinkriver;
-  font-size: var(--wp--custom--typography--tiny);
+  font-size: $p-font-size;
 }
+
+nav.nav-primary {
+  // right: -100vw;
+  background-color: $utgray1 !important;
+  // this background-color is taking priority over the custom_variables $offcanvas-bg-color and is used in the mobile nav modal bkg
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+  margin-bottom: calc($spacer);
+  // height: 100%;
+  padding-top: calc($spacer * 3);
+  // align-items: stretch;
+
+  margin-left: calc($spacer / 2);
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+  }
+  ul.menu-primary {
+    // padding: $spacer 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    // align-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    width: 100%;
+    flex-direction: column;
+    @include media-breakpoint-up(lg) {
+      // border: 2px solid red;
+      // background: $utgray1;
+      flex-direction: row;
+    }
+
+    > .menu-item {
+      // height: 3rem;
+      display: flex;
+
+      font-size: $p-font-size;
+      flex-direction: column;
+      align-items: flex-start;
+      align-content: flex-start;
+      justify-content: flex-start;
+      // background-color: pink;
+      display: block;
+      max-width: fit-content;
+      position: relative;
+      a {
+        padding: $spacer;
+        // height: auto;
+        border: 1px solid green;
+
+        background-color: red;
+        text-decoration: none;
+        color: $utsmokeytext;
+        display: block;
+        // :before {
+        //   // makes full button clickable
+        //   content: '';
+        //   position: absolute;
+        //   top: 0;
+        //   right: 0;
+        //   bottom: 0;
+        //   left: 0;
+        //   z-index: 1;
+        // }
+        &:hover {
+          background: $utcoolrock;
+          background: $utgray2;
+          cursor: pointer;
+          border: 1px solid purple;
+          // height: 3rem;
+        }
+
+        //   &.current-menu-item :first-of-type,
+        //   > .current-menu-ancestor {
+        //     background: $utcoolrock;
+        //     a {
+        //       font-weight: bold;
+        //     }
+        //   }
+        // }
+        span {
+          margin: 0;
+          padding: 0;
+        }
+      }
+      &.menu-item-has-children {
+        &:hover {
+          @include media-breakpoint-up(lg) {
+            ul.sub-menu {
+              visibility: visible;
+              margin-top: 0;
+              position: absolute;
+            }
+          }
+        }
+      }
+      ul.sub-menu {
+        // display: inline-block;
+        // background-color: greenyellow;
+        height: auto;
+        // margin: 0 -1rem -1rem -1rem;
+        margin: 0 0 0 calc($spacer * 3);
+        width: calc(100% - 2rem);
+        // margin-bottom: -1rem;
+        border-bottom: 2px solid $utgray1;
+        padding: $spacer 0;
+        z-index: 10;
+        list-style: none;
+        position: relative;
+        display: block;
+
+        font-size: calc($p-font-size * 0.92);
+        @include media-breakpoint-up(lg) {
+          position: absolute;
+          margin: 0.5rem 0 -1rem 0;
+          display: flex;
+          flex-direction: column;
+          margin-top: -300rem; // just pushing content off screen so doesn't mess with height of parent
+          visibility: hidden;
+          padding: 0 0;
+          min-width: 130%;
+        }
+        li a {
+          background-color: $utgray1;
+          &:hover {
+            background: $utcoolrock;
+            cursor: pointer;
+            border: 1px solid purple;
+            display: block;
+            // height: 3rem;
+          }
+        }
+      }
+    }
+  } // end ul
+}
+
+li.current-menu-item > a {
+  background: $utgray2;
+  box-shadow: inset 0px -2px $utorange;
+  // background-color: $utorange;
+}
+
+// li.menu-item .menu-item-has-children > a {
+//   &:hover {
+//     border: 5px solid greenyellow;
+//   }
+// }
