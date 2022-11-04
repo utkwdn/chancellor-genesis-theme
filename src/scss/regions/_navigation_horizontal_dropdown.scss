@@ -1,19 +1,48 @@
 .site-header .wrap {
   @extend .d-flex;
-  align-items: center;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: space-between;
   // padding: calc($spacer * 0.5) 0;
+  border: 1px solid red;
+  display: inline-flex;
+
+  @include media-breakpoint-up(lg) {
+    display: inline-flex;
+  }
+}
+.title-area {
+  padding-top: calc($spacer / 2);
+
+  .site-title a {
+    background-size: cover;
+    background-position: center;
+    background-color: red;
+    border: 1px solid blue;
+  }
 }
 
 .btn-mobileNav {
   background-color: transparent;
+  flex-direction: row;
   border: none;
   margin-left: auto;
   display: block;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: 1px solid green;
+  padding: $spacer;
   @include media-breakpoint-up(lg) {
     display: none;
   }
 }
 
+.btn-hamburger {
+  transform: scale(1.2);
+  fill: $utsmokey;
+  margin-right: calc($spacer * 0.75);
+}
 // .btn-mobileNav .collapse {
 //   nav.nav-primary {
 //     display: none;
@@ -69,18 +98,20 @@ nav.nav-primary {
       font-size: $p-font-size;
       flex-direction: column;
       align-items: flex-start;
+      align-items: stretch;
       align-content: flex-start;
       justify-content: flex-start;
       // background-color: pink;
-      display: block;
+      display: block; // allows sub menu to flow from bottom
       max-width: fit-content;
       position: relative;
+
       a {
         padding: $spacer;
         // height: auto;
-        border: 1px solid green;
-
-        background-color: red;
+        // border: 1px solid green;
+        height: 100%; // makes menu-items stay same height even when more than one line
+        // background-color: orange;
         text-decoration: none;
         color: $utsmokeytext;
         display: block;
@@ -98,7 +129,7 @@ nav.nav-primary {
           background: $utcoolrock;
           background: $utgray2;
           cursor: pointer;
-          border: 1px solid purple;
+          // border: 1px solid purple;
           // height: 3rem;
         }
 
@@ -115,6 +146,7 @@ nav.nav-primary {
           padding: 0;
         }
       }
+
       &.menu-item-has-children {
         &:hover {
           @include media-breakpoint-up(lg) {
@@ -154,6 +186,7 @@ nav.nav-primary {
         }
         li a {
           background-color: $utgray1;
+
           &:hover {
             background: $utcoolrock;
             cursor: pointer;
