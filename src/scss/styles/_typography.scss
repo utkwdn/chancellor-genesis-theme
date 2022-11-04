@@ -58,10 +58,14 @@ h1 {
   margin-top: calc($spacer * 4);
   margin-bottom: calc($spacer * 3);
   text-transform: uppercase;
-  max-width: 90vw;
-  @media screen and (min-width: 1200px) {
-    max-width: 34vw;
-  }
+  // keeps super long words like chancellorship from breaking lines
+  inline-size: min-content;
+  word-break: normal;
+  // max-width: 90vw;
+  // @media screen and (min-width: 1200px) {
+  //   max-width: 34vw;
+
+  // }
 }
 h2 {
   margin-top: calc($spacer * 3.2);

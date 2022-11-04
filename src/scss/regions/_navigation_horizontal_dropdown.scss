@@ -1,191 +1,292 @@
 .site-header .wrap {
   @extend .d-flex;
   align-items: center;
+  align-content: center;
+  justify-content: space-between;
   // padding: calc($spacer * 0.5) 0;
+  // border: 1px solid red;
+  display: inline-flex;
+
+  @include media-breakpoint-up(lg) {
+    display: inline-flex;
+  }
 }
+.title-area {
+  padding-top: calc($spacer / 2);
 
-nav.nav-primary {
-  // right: -100vw;
-  background-color: $utgray1 !important;
-  display: flex;
-  align-items: stretch;
-  width: 100vw;
-  margin: 0 calc(50% - 50vw);
-  width: 100vw;
-  margin-bottom: calc($spacer);
-  ul {
-    padding: 0;
-    margin: 0;
-    display: flex;
-
-    justify-content: flex-end;
-    align-items: center;
-    align-content: center;
+  .site-title a {
+    background-size: cover;
+    background-position: center;
     // background-color: red;
-    li {
-      // height: 3rem;
-      display: flex;
-      align-items: center;
-      // background-color: pink;
-    }
-  }
-}
-.genesis-nav-menu {
-  //background: $utgray1;
-  // font-size: calc($font-size-sm * 0.9);
-  font-size: var(--wp--custom--typography--default);
-  // border: 1px solid blue;
-  padding: $spacer 0;
-  list-style: none;
-  margin: 0;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: stretch;
-  // gap: calc($spacer * 1);
-  margin-left: calc($spacer / 2);
-  @include media-breakpoint-up(lg) {
-    // border: 2px solid red;
-    background: $utgray1;
-    flex-direction: row;
-  }
-
-  li.menu-item {
-    display: block;
-    align-content: space-between;
-    position: relative;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    margin: 0;
-    width: 100%;
-    // border: 0.5px solid green;
-    @include media-breakpoint-up(lg) {
-      width: auto;
-
-      transition-duration: 0.5s;
-    }
-    a {
-      text-decoration: none;
-      color: $utsmokeytext;
-      display: block;
-      :before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-      }
-    }
-    &.current-menu-item,
-    &.current-menu-ancestor {
-      background: $utcoolrock;
-    }
-    &:hover {
-      background: $utcoolrock;
-      cursor: pointer;
-      // height: 3rem;
-    }
-    ul {
-      background: $utgray1;
-      display: flex;
-      left: 0;
-      margin: calc($spacer / 2) 0 0 0;
-      min-width: 10rem;
-      padding-left: 0;
-
-      @include media-breakpoint-up(lg) {
-        display: none;
-        opacity: 0;
-
-        // transition: all 0.5s ease;
-        visibility: hidden;
-        position: absolute;
-
-        z-index: 10;
-      }
-    }
-
-    .sub-menu {
-      display: inline-block;
-      height: auto;
-      margin: 0 -1rem -1rem -1rem;
-      width: calc(100% + 2rem);
-      margin-bottom: -1rem;
-
-      border-bottom: 2px solid $utgray1;
-      @include media-breakpoint-up(lg) {
-        margin: 0.5rem 0 -1rem 0;
-      }
-
-      li.menu-item {
-        padding-left: calc($spacer * 2);
-        font-size: 90%;
-        z-index: 12;
-      }
-    }
-  }
-
-  li.current-menu-item a,
-  > li.current-menu-ancestor > a {
-    font-weight: bold;
-  }
-
-  @include media-breakpoint-up(lg) {
-    li:hover > ul,
-    li:focus-within > ul,
-    li ul:hover,
-    li ul:focus {
-      visibility: visible;
-      opacity: 1;
-      display: block;
-      position: absolute;
-      // top: 2.5rem;
-    }
-    li ul li {
-      height: auto;
-      padding: 0.5rem 1rem;
-      &:hover {
-        background: $utcoolrock;
-        @media screen and (min-width: 900px) {
-          transition: all 0.5s ease;
-        }
-        cursor: pointer;
-        height: auto;
-        width: 100%;
-      }
-    }
-  }
-  li.current-menu-item {
-    background: $utgray2;
-    // border-bottom: 2px solid $utorange;
-    @include media-breakpoint-up(lg) {
-      transition: all 0.5s ease;
-    }
-    // width: 100%;
-    // text-align: center;
+    // border: 1px solid blue;
   }
 }
 
 .btn-mobileNav {
   background-color: transparent;
+  flex-direction: row;
   border: none;
   margin-left: auto;
   display: block;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  // border: 1px solid green;
+  padding: $spacer;
   @include media-breakpoint-up(lg) {
     display: none;
   }
 }
 
-.btn-mobileNav .collapse {
-  nav.nav-primary {
-    display: none;
-  }
+.btn-hamburger {
+  transform: scale(1.2);
+  fill: $utsmokey;
+  margin-right: calc($spacer * 0.75);
 }
+// .btn-mobileNav .collapse {
+//   nav.nav-primary {
+//     display: none;
+//   }
+// }
 
 .navLabel {
   color: $utlinkriver;
-  font-size: var(--wp--custom--typography--tiny);
+  font-size: $p-font-size;
+}
+
+nav.nav-primary {
+  // right: -100vw;
+  background-color: $utgray1 !important;
+  // this background-color is taking priority over the custom_variables $offcanvas-bg-color and is used in the mobile nav modal bkg
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+  margin-bottom: calc($spacer);
+  // height: 100%;
+  padding-top: calc($spacer * 3);
+  // align-items: stretch;
+
+  margin-left: calc($spacer / 2);
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+  }
+  ul.menu-primary {
+    // padding: $spacer 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    // align-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    width: 100%;
+    flex-direction: column;
+    @include media-breakpoint-up(lg) {
+      // border: 2px solid red;
+      // background: $utgray1;
+      flex-direction: row;
+      // flex-wrap: wrap;
+    }
+
+    > .menu-item {
+      // height: 3rem;
+      display: flex;
+      font-size: $p-font-size;
+      flex-direction: column;
+      align-items: flex-start;
+      align-items: stretch;
+      align-content: flex-start;
+      justify-content: flex-start;
+      // background-color: pink;
+      display: block; // allows sub menu to flow from bottom
+      position: relative;
+      @include media-breakpoint-up(lg) {
+        max-width: fit-content;
+        flex: 0 1 auto;
+        // text-align: center;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        height: auto;
+        border-bottom: 2px solid $utgray2;
+        width: 100%;
+        // top: 3rem;
+        // right: -1rem;
+        // bottom: -2rem;
+        // left: 2rem;
+        @include media-breakpoint-up(lg) {
+          content: none;
+        }
+      }
+
+      a {
+        padding: $spacer;
+        width: 100%;
+        // height: auto;
+        height: 100%; // makes menu-items stay same height even when more than one line
+        // background-color: orange;
+        text-decoration: none;
+        color: $utsmokeytext;
+        display: block;
+
+        @include media-breakpoint-up(lg) {
+          flex: 0 1 auto;
+          // text-align: center;
+          // border: 1px solid green;
+        }
+
+        // position: relative;
+        // :before {
+        //   // makes full button clickable – not needed now. this was a hack for when we were clicking on li elements
+        //   content: '';
+        //   position: absolute;
+        //   top: 0;
+        //   right: 0;
+        //   bottom: 0;
+        //   left: 0;
+        //   z-index: 1;
+        // }
+        &:hover {
+          background: $utcoolrock;
+          background: $utgray2;
+          cursor: pointer;
+          color: 'var(--wp--preset--color--smokeyX)';
+          // border: 1px solid purple;
+          // height: 3rem;
+        }
+
+        //   &.current-menu-item :first-of-type,
+        //   > .current-menu-ancestor {
+        //     background: $utcoolrock;
+        //     a {
+        //       font-weight: bold;
+        //     }
+        //   }
+        // }
+        span {
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      &.menu-item-has-children {
+        &:hover {
+          @include media-breakpoint-up(lg) {
+            ul.sub-menu {
+              visibility: visible;
+              margin-top: 0;
+              position: absolute;
+            }
+          }
+        }
+      }
+      ul.sub-menu {
+        // display: inline-block;
+        // background-color: greenyellow;
+        height: auto;
+        // margin: 0 -1rem -1rem -1rem;
+        margin: 0 0 0 calc($spacer * 0.75);
+        width: calc(100% - 2rem);
+        // margin-bottom: -1rem;
+        border-bottom: 2px solid $utgray1;
+        padding: calc($spacer * 0.5) 0;
+        z-index: 10;
+        list-style: none;
+        position: relative;
+        display: block;
+
+        font-size: calc($p-font-size * 0.92);
+        @include media-breakpoint-up(lg) {
+          position: absolute;
+          margin: 0.5rem 0 -1rem 0;
+          display: flex;
+          flex-direction: column;
+          margin-top: -300rem; // just pushing content off screen so doesn't mess with height of parent
+          visibility: hidden;
+          padding: 0 0;
+          min-width: 130%;
+          // when nav is next to grey items, it blends too much. Just adding a white border to pop a bit
+          border-bottom: 1px solid white;
+          border-left: 1px solid white;
+          border-right: 1px solid white;
+        }
+        li a {
+          display: flex;
+          flex-direction: row;
+
+          @include media-breakpoint-up(lg) {
+            background-color: $utgray1;
+            min-width: 0;
+          }
+          // border: 1px solid yellowgreen;
+          // &:before {
+          //   // playing with adding a dash before all sub items as a visual – Not sure we need this.
+          //   content: '–';
+          //   color: $utgray2;
+          //   display: inline-block;
+          //   position: relative;
+          //   padding-right: calc($spacer * 0.5);
+
+          //   @include media-breakpoint-up(lg) {
+          //     content: none;
+          //   }
+          // }
+
+          &:hover {
+            background: $utcoolrock;
+            background: $utgray2;
+            cursor: pointer;
+            display: block;
+            // height: 3rem;
+          }
+        }
+      }
+    }
+  } // end ul
+}
+
+li.current-menu-item > a {
+  background: $utgray2;
+  box-shadow: inset 0px -2px $utorange;
+  font-weight: bold;
+  color: 'var(--wp--preset--color--smokeyX)' !important;
+  // background-color: $utorange;
+}
+
+// li.menu-item .menu-item-has-children > a {
+//   &:hover {
+//     border: 5px solid greenyellow;
+//   }
+// }
+
+li.current_page_ancestor > a {
+  // box-shadow: inset 0px -2px $utorange;
+  &:after {
+    content: none;
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='8.9' fill='%23fff' viewBox='0 0 23 8.9' %3E%3Cpath d='M0,0L11.5,8.9,23,0H0Z' /%3E%3C/svg%3E");
+      /* <svg xmlns="https://www.w3.org/2000/svg" width="30" height="22" fill="#ff8200" viewBox="0 0 25 26"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path></svg> */
+      margin: 0 auto;
+      transform: scale(1.3);
+      width: 10%;
+      left: 50%;
+      right: 50%;
+      display: block;
+      z-index: 12;
+      transition: all 0.2s ease-out;
+      height: min-content;
+      top: -0.7rem;
+    }
+  }
+  // &:hover {
+  //   &:after {
+  //     opacity: 0;
+  //   }
+  // }
 }
