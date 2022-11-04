@@ -1,10 +1,10 @@
 .site-header .wrap {
   @extend .d-flex;
-  align-items: flex-start;
+  align-items: center;
   align-content: center;
   justify-content: space-between;
   // padding: calc($spacer * 0.5) 0;
-  border: 1px solid red;
+  // border: 1px solid red;
   display: inline-flex;
 
   @include media-breakpoint-up(lg) {
@@ -17,8 +17,8 @@
   .site-title a {
     background-size: cover;
     background-position: center;
-    background-color: red;
-    border: 1px solid blue;
+    // background-color: red;
+    // border: 1px solid blue;
   }
 }
 
@@ -31,7 +31,7 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  border: 1px solid green;
+  // border: 1px solid green;
   padding: $spacer;
   @include media-breakpoint-up(lg) {
     display: none;
@@ -89,12 +89,12 @@ nav.nav-primary {
       // border: 2px solid red;
       // background: $utgray1;
       flex-direction: row;
+      // flex-wrap: wrap;
     }
 
     > .menu-item {
       // height: 3rem;
       display: flex;
-
       font-size: $p-font-size;
       flex-direction: column;
       align-items: flex-start;
@@ -103,20 +103,46 @@ nav.nav-primary {
       justify-content: flex-start;
       // background-color: pink;
       display: block; // allows sub menu to flow from bottom
-      max-width: fit-content;
       position: relative;
+      @include media-breakpoint-up(lg) {
+        max-width: fit-content;
+        flex: 0 1 auto;
+        // text-align: center;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        height: auto;
+        border-bottom: 2px solid $utgray2;
+        width: 100%;
+        // top: 3rem;
+        // right: -1rem;
+        // bottom: -2rem;
+        // left: 2rem;
+        @include media-breakpoint-up(lg) {
+          content: none;
+        }
+      }
 
       a {
         padding: $spacer;
+        width: 100%;
         // height: auto;
-        // border: 1px solid green;
         height: 100%; // makes menu-items stay same height even when more than one line
         // background-color: orange;
         text-decoration: none;
         color: $utsmokeytext;
         display: block;
+
+        @include media-breakpoint-up(lg) {
+          flex: 0 1 auto;
+          // text-align: center;
+          // border: 1px solid green;
+        }
+
+        // position: relative;
         // :before {
-        //   // makes full button clickable
+        //   // makes full button clickable – not needed now. this was a hack for when we were clicking on li elements
         //   content: '';
         //   position: absolute;
         //   top: 0;
@@ -129,6 +155,7 @@ nav.nav-primary {
           background: $utcoolrock;
           background: $utgray2;
           cursor: pointer;
+          color: 'var(--wp--preset--color--smokeyX)';
           // border: 1px solid purple;
           // height: 3rem;
         }
@@ -163,11 +190,11 @@ nav.nav-primary {
         // background-color: greenyellow;
         height: auto;
         // margin: 0 -1rem -1rem -1rem;
-        margin: 0 0 0 calc($spacer * 3);
+        margin: 0 0 0 calc($spacer * 0.75);
         width: calc(100% - 2rem);
         // margin-bottom: -1rem;
         border-bottom: 2px solid $utgray1;
-        padding: $spacer 0;
+        padding: calc($spacer * 0.5) 0;
         z-index: 10;
         list-style: none;
         position: relative;
@@ -183,14 +210,37 @@ nav.nav-primary {
           visibility: hidden;
           padding: 0 0;
           min-width: 130%;
+          // when nav is next to grey items, it blends too much. Just adding a white border to pop a bit
+          border-bottom: 1px solid white;
+          border-left: 1px solid white;
+          border-right: 1px solid white;
         }
         li a {
-          background-color: $utgray1;
+          display: flex;
+          flex-direction: row;
+
+          @include media-breakpoint-up(lg) {
+            background-color: $utgray1;
+            min-width: 0;
+          }
+          // border: 1px solid yellowgreen;
+          // &:before {
+          //   // playing with adding a dash before all sub items as a visual – Not sure we need this.
+          //   content: '–';
+          //   color: $utgray2;
+          //   display: inline-block;
+          //   position: relative;
+          //   padding-right: calc($spacer * 0.5);
+
+          //   @include media-breakpoint-up(lg) {
+          //     content: none;
+          //   }
+          // }
 
           &:hover {
             background: $utcoolrock;
+            background: $utgray2;
             cursor: pointer;
-            border: 1px solid purple;
             display: block;
             // height: 3rem;
           }
@@ -203,6 +253,8 @@ nav.nav-primary {
 li.current-menu-item > a {
   background: $utgray2;
   box-shadow: inset 0px -2px $utorange;
+  font-weight: bold;
+  color: 'var(--wp--preset--color--smokeyX)' !important;
   // background-color: $utorange;
 }
 
@@ -211,3 +263,30 @@ li.current-menu-item > a {
 //     border: 5px solid greenyellow;
 //   }
 // }
+
+li.current_page_ancestor > a {
+  // box-shadow: inset 0px -2px $utorange;
+  &:after {
+    content: none;
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='8.9' fill='%23fff' viewBox='0 0 23 8.9' %3E%3Cpath d='M0,0L11.5,8.9,23,0H0Z' /%3E%3C/svg%3E");
+      /* <svg xmlns="https://www.w3.org/2000/svg" width="30" height="22" fill="#ff8200" viewBox="0 0 25 26"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path></svg> */
+      margin: 0 auto;
+      transform: scale(1.3);
+      width: 10%;
+      left: 50%;
+      right: 50%;
+      display: block;
+      z-index: 12;
+      transition: all 0.2s ease-out;
+      height: min-content;
+      top: -0.7rem;
+    }
+  }
+  // &:hover {
+  //   &:after {
+  //     opacity: 0;
+  //   }
+  // }
+}
