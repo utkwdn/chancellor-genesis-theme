@@ -546,9 +546,21 @@ ul.chancellorThoughtPost {
     //   margin: 3rem 0 2rem 0;
     // }
 
+    // &:before {
+    // using arrow made from squares – rocky top arrow. Not used for now.
+    //   content: url('https://images.utk.edu/wds/rocky-top-arrow-02.svg');
+    //   transform: scale(0.3);
+    //   font-size: var(--wp--custom--typography--tiny);
+    //   transform-origin: calc($spacer * 4.75) center;
+    //   position: absolute;
+    //   bottom: calc($spacer * 0.25);
+    //   display: block;
+    //   width: 100%;
+    //   left: 0;
+    // }
     &:before {
-      content: url('https://images.utk.edu/wds/rocky-top-arrow-02.svg');
-      transform: scale(0.3);
+      content: url('https://images.utk.edu/wds/solid-arrow-03.svg');
+      transform: scale(0.4);
       font-size: var(--wp--custom--typography--tiny);
       transform-origin: calc($spacer * 4.75) center;
       position: absolute;

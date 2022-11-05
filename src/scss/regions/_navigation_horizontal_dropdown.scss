@@ -251,7 +251,7 @@ nav.nav-primary {
 }
 
 li.current-menu-item > a {
-  background: $utgray2;
+  background-color: $utgray2 !important;
   box-shadow: inset 0px -2px $utorange;
   font-weight: bold;
   color: 'var(--wp--preset--color--smokeyX)' !important;

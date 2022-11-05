@@ -326,7 +326,7 @@ $font-family-sans-serif: "Gotham A", "Gotham B", "Gotham SSm 4r", "Gotham SSm A"
   "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-size-base: 1.25rem; // Assumes the browser default, typically `16px`
 
-$font-size-base: 1.1rem; // Assumes the browser default, typically `16px`
+$font-size-base: 1.1rem; // This is setting base font to 17.6px 
 $font-size-lg: $font-size-base * 1.1;
 $font-size-xlg: $font-size-base * 1.25;
 $font-size-sm: $font-size-base * 0.875 !default;
@@ -1007,17 +1007,12 @@ $modal-content-bg:                  $white !default;
 $modal-content-color:               null !default;
 $modal-content-box-shadow-xs:       $box-shadow-sm !default;
 
-
 $modal-footer-margin-between:       .5rem !default;
 
 $modal-dialog-margin:               .5rem !default;
 $modal-dialog-margin-y-sm-up:       1.75rem !default;
 $modal-backdrop-bg:                 $black !default;
 $modal-backdrop-opacity:            .5 !default;
-
-
-
-
 
 $modal-content-border-width:        $border-width !default;
 
@@ -1026,11 +1021,7 @@ $modal-content-border-radius:       $border-radius-lg !default;
 $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width) !default;
 
 $modal-content-box-shadow-sm-up:    $box-shadow !default;
-
-
 // scss-docs-end modal-variables
-
-
 
 // Offcanvas
 
