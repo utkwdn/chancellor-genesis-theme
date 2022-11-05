@@ -1014,7 +1014,7 @@ $modal-dialog-margin-y-sm-up:       1.75rem !default;
 $modal-backdrop-bg:                 $black !default;
 $modal-backdrop-opacity:            .5 !default;
 
-$modal-content-border-width:        $border-width !default;
+$modal-content-border-width:        0;
 
 $modal-header-border-width:         $modal-content-border-width !default;
 $modal-content-border-radius:       $border-radius-lg !default;
@@ -1032,7 +1032,7 @@ $offcanvas-horizontal-width:        80vw;
 $offcanvas-vertical-height:         30vh !default;
 $offcanvas-transition-duration:     .3s !default;
 $offcanvas-title-line-height:       $modal-title-line-height !default;
-$offcanvas-bg-color:                purple;
+$offcanvas-bg-color:                white;
 // $offcanvas-color:                   $modal-content-color !default;
 // $offcanvas-box-shadow:              $modal-content-box-shadow-xs !default;
 // $offcanvas-backdrop-bg:             $modal-backdrop-bg !default;

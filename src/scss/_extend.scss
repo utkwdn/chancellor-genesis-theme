@@ -358,6 +358,7 @@ h1.adaOrange {
 .fancyLinkGroup {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: calc($spacer * 3);
   margin-bottom: $spacer;
 }
