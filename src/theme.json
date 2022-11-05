@@ -199,33 +199,53 @@
         {
           "name": "Tiny",
           "slug": "tiny",
-          "size": "var(--wp--custom--typography--tiny)"
+          "size": "var(--wp--custom--typography--tiny)",
+          "fluid": {
+            "min": "calc(var(--wp--custom--typography--scale) * .5)",
+            "max": "calc(var(--wp--custom--typography--scale) * .68)"
+          }
         },
         {
           "name": "Small",
           "slug": "small",
-          "size": "var(--wp--custom--typography--small)"
+          "size": "var(--wp--custom--typography--small)",
+          "fluid": {
+            "min": "calc(var(--wp--custom--typography--scale) * .68)",
+            "max": "calc(var(--wp--custom--typography--scale) * .92)"
+          }
         },
         {
           "name": "Normal",
           "slug": "normal",
-          "size": "var(--wp--custom--typography--normal)"
+          "size": "var(--wp--custom--typography--normal)",
+          "fluid": {
+            "min": "calc(var(--wp--custom--typography--scale) * .92)",
+            "max": "var(--wp--custom--typography--scale"
+          }
         },
 
         {
           "name": "Medium",
+          "slug": "medium",
           "size": "var(--wp--custom--typography--medium)",
-          "slug": "medium"
+          "fluid": {
+            "min": "var(--wp--custom--typography--scale",
+            "max": "calc(var(--wp--custom--typography--scale) * 1.7)"
+          }
         },
         {
           "name": "Large",
+          "slug": "large",
           "size": "var(--wp--custom--typography--large)",
-          "slug": "large"
+          "fluid": {
+            "min": "calc(var(--wp--custom--typography--scale) * 1.7)",
+            "max": "calc(var(--wp--custom--typography--scale) * 2.32)"
+          }
         },
         {
           "name": "X-Large",
-          "size": "var(--wp--custom--typography--xlarge)",
           "slug": "x-large",
+          "size": "var(--wp--custom--typography--xlarge)",
           "fluid": {
             "min": "calc(var(--wp--custom--typography--scale) * 2.32)",
             "max": "calc(var(--wp--custom--typography--scale) * 3.16)"
@@ -235,7 +255,7 @@
     },
     "custom": {
       "typography": {
-        "scale": "1.25rem",
+        "scale": "1.1rem",
         "tiny": "calc(var(--wp--custom--typography--scale) * .68)",
         "small": "calc(var(--wp--custom--typography--scale) * .92)",
         "normal": "var(--wp--custom--typography--scale)",

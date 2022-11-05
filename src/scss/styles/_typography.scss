@@ -59,12 +59,11 @@ h1 {
   margin-bottom: calc($spacer * 3);
   text-transform: uppercase;
   // keeps super long words like chancellorship from breaking lines
-  inline-size: min-content;
+  // inline-size: min-content;
   word-break: normal;
   // max-width: 90vw;
   // @media screen and (min-width: 1200px) {
   //   max-width: 34vw;
-
   // }
 }
 h2 {
@@ -139,4 +138,24 @@ p.has-medium-font-size {
 
 .titleWidthFix {
   max-width: none !important;
+}
+
+// adding special case for h1 that appear inside columns. clamp is based off body width
+// must account for the container being a different width so VAL must be adjusted for scaling
+// to take place inside containers. Otherwise words break oddly.
+
+.wp-block-columns h1 {
+  font-size: clamp(
+    (calc($font-size-base * 2.24)),
+    3vw + 1rem,
+    (calc($font-size-base * 3.7224))
+  );
+}
+
+.wp-block-columns h2 {
+  font-size: clamp(
+    (calc($font-size-base * 1.647)),
+    2vw + 1rem,
+    (calc($font-size-base * 2.7368))
+  );
 }
