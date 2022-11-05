@@ -117,21 +117,6 @@ h2.heading-oa-bar {
   font-weight: $font-weight-bold;
 }
 
-.quietHeading {
-  font-size: 80%;
-  line-height: 120%;
-  text-transform: uppercase;
-  letter-spacing: 0.5vw;
-  margin-bottom: 1.7vw;
-}
-
-h3.quietHeading {
-  text-transform: uppercase;
-  font-size: $h6-font-size;
-  margin-top: calc($spacer * 2.25);
-  font-weight: $font-weight-normal;
-}
-
 p.has-medium-font-size {
   margin-bottom: calc($spacer * 2);
 }
@@ -158,4 +143,24 @@ p.has-medium-font-size {
     2vw + 1rem,
     (calc($font-size-base * 2.7368))
   );
+}
+
+// special small headings used on the Chancellor site. Forcing font size smaller
+// percentage was being overwritten by block-column fix above
+h1.quietHeading,
+h2.quietHeading {
+  // font-size: 80%;
+  font-size: var(--wp--custom--typography--small);
+  line-height: 120%;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  margin-bottom: 1.7vw;
+}
+
+h3.quietHeading {
+  text-transform: uppercase;
+  // font-size: $h6-font-size;
+  font-size: var(--wp--custom--typography--tiny);
+  margin-top: calc($spacer * 2.25);
+  font-weight: $font-weight-normal;
 }

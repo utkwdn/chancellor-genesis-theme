@@ -67,7 +67,7 @@ nav.nav-primary {
   width: 100vw;
   margin-bottom: calc($spacer);
   // height: 100%;
-  padding-top: calc($spacer * 3);
+  // padding-top: calc($spacer * 3);
   // align-items: stretch;
 
   margin-left: calc($spacer / 2);
@@ -125,7 +125,9 @@ nav.nav-primary {
       }
 
       a {
-        padding: $spacer;
+        // controls the height and width of the nav buttons
+        padding: calc($spacer * 0.65);
+        min-width: 0;
         width: 100%;
         // height: auto;
         height: 100%; // makes menu-items stay same height even when more than one line
@@ -135,6 +137,7 @@ nav.nav-primary {
         display: block;
 
         @include media-breakpoint-up(lg) {
+          padding: $spacer;
           flex: 0 1 auto;
           // text-align: center;
           // border: 1px solid green;
@@ -190,11 +193,13 @@ nav.nav-primary {
         // background-color: greenyellow;
         height: auto;
         // margin: 0 -1rem -1rem -1rem;
-        margin: 0 0 0 calc($spacer * 0.75);
+        margin: 0 0 0 calc($spacer * 1.3);
         width: calc(100% - 2rem);
         // margin-bottom: -1rem;
         border-bottom: 2px solid $utgray1;
-        padding: calc($spacer * 0.5) 0;
+        // padding: calc($spacer * 0.5) 0;
+        padding: 0 0 calc($spacer * 0.5) 0;
+        padding: 0;
         z-index: 10;
         list-style: none;
         position: relative;
@@ -209,7 +214,7 @@ nav.nav-primary {
           margin-top: -300rem; // just pushing content off screen so doesn't mess with height of parent
           visibility: hidden;
           padding: 0 0;
-          min-width: 130%;
+          min-width: 110%;
           // when nav is next to grey items, it blends too much. Just adding a white border to pop a bit
           border-bottom: 1px solid white;
           border-left: 1px solid white;
@@ -219,9 +224,11 @@ nav.nav-primary {
           display: flex;
           flex-direction: row;
 
+          padding: calc($spacer * 0.45);
           @include media-breakpoint-up(lg) {
             background-color: $utgray1;
             min-width: 0;
+            padding: calc($spacer);
           }
           // border: 1px solid yellowgreen;
           // &:before {
