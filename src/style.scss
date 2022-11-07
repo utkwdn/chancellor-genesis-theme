@@ -4,7 +4,7 @@ Theme URI: http://chancellor.utk.edu/
 Author: The UT Web Team
 Author URI: http://communications.utk.edu
 Description: The official UT WordPress Design System theme.
-Version: 0.1.7
+Version: 0.1.8
 
 Template: genesis
 
@@ -84,6 +84,7 @@ Template: genesis
 @import 'scss/components/calendars';
 @import 'scss/components/cards';
 @import 'scss/components/cover';
+@import 'scss/components/columns';
 @import 'scss/components/forms';
 // @import "scss/components/gallery";
 @import 'scss/components/latest_posts';
