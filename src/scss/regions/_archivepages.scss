@@ -101,6 +101,7 @@
               text-decoration: none;
               padding: calc($spacer * 0.3) calc($spacer * 0.5);
               background-color: white;
+              white-space: nowrap;
 
               //   text-transform: uppercase;
               &:hover {

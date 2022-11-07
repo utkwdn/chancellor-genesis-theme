@@ -248,7 +248,7 @@
           "size": "var(--wp--custom--typography--xlarge)",
           "fluid": {
             "min": "calc(var(--wp--custom--typography--scale) * 2.32)",
-            "max": "calc(var(--wp--custom--typography--scale) * 3.16)"
+            "max": "var(--wp--custom--typography--xlarge)"
           }
         }
       ]
@@ -274,7 +274,7 @@
         },
         "border": {
           "radius": ".45rem",
-          "width": ".2rem",
+          "width": ".1rem",
           "color": "var(--wp--preset--color--orange)"
         }
       },
@@ -293,6 +293,23 @@
         "color": {
           "text": "var(--wp--preset--color--orange)",
           "background": "var(--wp--preset--color--white)"
+        },
+        "hover": {
+          "color": {
+            "text": "green",
+
+            "text-decoration": "none"
+          }
+        }
+      },
+      "link": {
+        "color": {
+          "text": "$utlinkriver"
+        },
+        "hover": {
+          "color": {
+            "text": "green"
+          }
         }
       }
     }
