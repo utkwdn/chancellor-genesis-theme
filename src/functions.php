@@ -85,3 +85,37 @@ remove_theme_support( 'genesis-seo-settings-menu' );
 
 // Remove Genesis SEO settings from taxonomy editor
 remove_action( 'admin_init', 'genesis_add_taxonomy_seo_options' );
+
+
+// Single Post Template Tweaks
+// =======================================================================
+// Hook Featured Image to Entry Header  
+add_action( 'genesis_entry_header', 'featured_post_image', 5 );
+function featured_post_image() {
+ if ( !is_singular( array( 'post', 'page' ) )) return;
+ the_post_thumbnail('post-image');
+}
+
+//* Remove the entry title in the entry header
+remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+
+//* Hook entry header to entry content 
+add_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+add_action( 'genesis_entry_content', 'genesis_do_post_title', 5);
+add_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+
+//* Remove the post info in the entry header
+remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+
+//* Hook post info to entry content 
+add_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+add_action( 'genesis_entry_content', 'genesis_post_info', 9 );
+add_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+
+
+// Archive Page
+// Hook Featured Image to Entry Header  
+remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
+add_action( 'genesis_entry_header', 'genesis_do_post_image', 1 );

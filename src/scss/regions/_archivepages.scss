@@ -15,10 +15,12 @@
     .post {
       //   box-shadow: 0px 5px 30px 0 #0000001a;
       background-color: $utgray1;
+      border-top: 6px solid $utorange;
       margin: calc($spacer / 2);
       @extend .clipCorner-br-container-sm;
       //   padding-top: calc($spacer * 8);
-      padding: calc($spacer * 8) calc($spacer * 3) calc($spacer * 3);
+      // padding: calc($spacer * 8) calc($spacer * 3) calc($spacer * 3);
+      padding: calc($spacer * 3) calc($spacer * 3) calc($spacer * 3);
       @include media-breakpoint-up(xl) {
         flex: 1 1 40%;
 
@@ -29,8 +31,12 @@
 
         @include media-breakpoint-up(xl) {
           .entry-content {
+            // img {
+            //   // max-width: calc(50% - 3rem);
+            //   // width: 100%;
+            // }
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             margin-bottom: calc($spacer * 1.5);
             column-gap: calc($spacer * 3);
             & > * {
@@ -45,17 +51,26 @@
         line-height: 1.1;
         font-weight: $font-weight-bold;
         position: relative;
-        &:before {
-          content: '';
-          position: absolute;
-          left: 0;
-          width: 90px;
-          margin-left: 0;
-          height: 6px;
-          background-color: $utorange;
-          top: -3rem;
-          bottom: auto;
-        }
+        // &:before {
+        //   content: '';
+        //   position: absolute;
+        //   left: 0;
+        //   width: 90px;
+        //   margin-left: 0;
+        //   height: 6px;
+        //   background-color: $utorange;
+        //   top: -3rem;
+        //   bottom: auto;
+        // }
+      }
+      .entry-content {
+        display: flex;
+        flex-direction: column;
+      }
+      img {
+        width: 100%;
+        //   padding: 0;
+        margin-bottom: $spacer;
       }
       .entry-title-link {
         color: $utsmokey;
@@ -72,6 +87,12 @@
       }
       .entry-content {
         margin-bottom: calc($spacer * 1.5);
+
+        .entry-title a:hover {
+          color: $utlinkriver;
+
+          cursor: pointer;
+        }
         .post-image {
           margin-bottom: calc($spacer * 3);
         }
@@ -93,6 +114,7 @@
           margin-top: $spacer;
           .entry-categories {
             font-size: var(--wp--custom--typography--tiny);
+            line-height: 2rem;
 
             a {
               border: 1px solid $utsmokey;
@@ -101,6 +123,7 @@
               text-decoration: none;
               padding: calc($spacer * 0.3) calc($spacer * 0.5);
               background-color: white;
+              white-space: nowrap;
 
               //   text-transform: uppercase;
               &:hover {
@@ -112,13 +135,16 @@
         }
       }
     }
-    .pagination ul {
-      width: 100%;
-      @extend .pagination;
-      li {
-        @extend .page-item;
-        a {
-          @extend .page-link;
+    .pagination {
+      flex-basis: 100%;
+      ul {
+        width: 100%;
+        @extend .pagination;
+        li {
+          @extend .page-item;
+          a {
+            @extend .page-link;
+          }
         }
       }
     }
