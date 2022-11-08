@@ -1,6 +1,28 @@
 .single-post {
   .content {
     .post {
+      .entry-content {
+        @include media-breakpoint-up(xl) {
+          width: 60%;
+          margin: 0 30% 0 10%;
+        }
+      }
+      h1 {
+        //overriding the defaults in WDS
+        text-transform: none;
+        line-height: 1.1;
+        // @include media-breakpoint-up(xl) {
+        //   max-width: 65%;
+        // }
+      }
+      img.wp-post-image {
+        width: 90%;
+        @extend .framedOrangeShadow;
+        margin-bottom: calc($spacer * 3) !important;
+        // @include media-breakpoint-up(xl) {
+        //   width: 60%;
+        // }
+      }
       .entry-meta {
         time {
           font-size: var(--wp--custom--typography--small);

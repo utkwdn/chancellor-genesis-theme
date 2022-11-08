@@ -1,4 +1,6 @@
-.archive {
+// styling blog to be exactly the same as archive
+.archive,
+.blog {
   .sidebar .widget {
     margin-top: calc($spacer * 3);
   }
