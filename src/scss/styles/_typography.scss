@@ -149,8 +149,8 @@ p.has-medium-font-size {
 // percentage was being overwritten by block-column fix above
 h1.quietHeading,
 h2.quietHeading {
-  // font-size: 80%;
-  font-size: var(--wp--custom--typography--small);
+  font-size: 80%;
+  // font-size: var(--wp--custom--typography--small);
   line-height: 120%;
   text-transform: uppercase;
   letter-spacing: 0.5vw;
