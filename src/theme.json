@@ -274,7 +274,7 @@
         },
         "border": {
           "radius": ".45rem",
-          "width": ".1rem",
+          "width": ".125rem",
           "color": "var(--wp--preset--color--orange)"
         }
       },
