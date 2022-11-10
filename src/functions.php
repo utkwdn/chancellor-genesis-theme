@@ -125,4 +125,4 @@ add_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
 // =======================================================================
 // Hook Featured Image to Entry Header  
 remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
-add_action( 'genesis_entry_header', 'genesis_do_post_image', 1 );
+add_action( 'genesis_entry_header', 'genesis_do_post_image', 2 );
