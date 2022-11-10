@@ -11,10 +11,15 @@
 }
 
 footer#colophon {
-  padding-top: $spacer;
+  // padding-top: $spacer; // this was keeping site-inner from snugging up with footer
 }
 
 #utk_footer_logo {
   max-width: 300px;
   margin-bottom: $spacer * 2;
+}
+
+.site-footer .wrap {
+  padding: $spacer 0;
+  //fixes copyright hitting the footer UT address section
 }

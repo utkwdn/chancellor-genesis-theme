@@ -66,13 +66,14 @@ nav.nav-primary {
   margin: 0 calc(50% - 50vw);
   width: 100vw;
   margin-bottom: calc($spacer);
+  overflow: scroll; // allows to scroll on mobile
   // height: 100%;
   // padding-top: calc($spacer * 3);
   // align-items: stretch;
-
   margin-left: calc($spacer / 2);
   @include media-breakpoint-up(lg) {
     padding-top: 0;
+    overflow: visible;
   }
   ul.menu-primary {
     // padding: $spacer 0;

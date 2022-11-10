@@ -13,6 +13,9 @@
     @include media-breakpoint-up(xl) {
       flex-direction: row;
     }
+    .archive-description {
+      flex-basis: 100%;
+    }
 
     .post {
       //   box-shadow: 0px 5px 30px 0 #0000001a;
@@ -32,21 +35,34 @@
         flex-basis: 100%;
 
         @include media-breakpoint-up(xl) {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: $spacer;
+          a {
+            flex: 1 0 6%;
+          }
           .entry-content {
             // img {
             //   // max-width: calc(50% - 3rem);
             //   // width: 100%;
             // }
             display: flex;
+            flex-basis: 40%;
             flex-direction: column;
             margin-bottom: calc($spacer * 1.5);
             column-gap: calc($spacer * 3);
             & > * {
-              flex-basis: 50%;
+              // flex-basis: 50%;
             }
+          }
+          .entry-footer {
+            flex-basis: 100%;
+            width: 100% !important;
           }
         }
       }
+
       .entry-title {
         font-size: calc($h2-font-size * 0.6);
         margin: calc($spacer / 2) 0;

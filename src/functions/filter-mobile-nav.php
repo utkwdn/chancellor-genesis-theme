@@ -37,5 +37,6 @@ function utkchancellor_navbar( $attributes ) {
 		$attributes['class']  = 'offcanvas-lg offcanvas-end nav-primary';
 		$attributes['tabindex']  = '-1';
 		$attributes['aria-labelledby']  = 'offcanvasResponsiveLabel';
+		
 	return $attributes;
 }
