@@ -455,11 +455,11 @@ ul.chancellorFeaturePost {
     //   left: 42%;
     //   margin: 3rem 0 2rem 0;
     // }
-    &:last-child {
-      &:after {
-        content: none;
-      }
-    }
+    // &:last-child {
+    //   &:after {
+    //     content: none;
+    //   }
+    // }
     // &:before {
     //   content: 'READ MORE';
     //   font-size: var(--wp--custom--typography--tiny);
@@ -518,19 +518,19 @@ ul.chancellorFeaturePost {
     li {
       flex: 1 1 100%;
       text-align: left;
-      &:after {
-        content: '';
-        display: block;
-        height: 2px;
-        // border: 2px solid $utorange;
-        width: 8%;
-        // margin: 0 40%;
-        margin: 10px;
-        background: $utorange;
-        position: absolute;
-        left: 42%;
-        margin: 3rem 0 2rem 0;
-      }
+      // &:after {
+      //   content: '';
+      //   display: block;
+      //   height: 2px;
+      //   // border: 2px solid $utorange;
+      //   width: 8%;
+      //   // margin: 0 40%;
+      //   margin: 10px;
+      //   background: $utorange;
+      //   position: absolute;
+      //   left: 42%;
+      //   margin: 3rem 0 2rem 0;
+      // }
       @media screen and (min-width: 900px) {
         flex: 1 1 auto;
         border-right: 2px solid $utorange;
