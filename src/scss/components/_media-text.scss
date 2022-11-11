@@ -1,0 +1,13 @@
+// force media-text block to stack sooner
+.wp-block-media-text {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  .wp-block-media-text__media {
+    align-self: center !important;
+  }
+  @include media-breakpoint-up(xxl) {
+    display: grid !important;
+    border: none;
+  }
+}

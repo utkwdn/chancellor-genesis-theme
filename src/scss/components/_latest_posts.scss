@@ -441,20 +441,20 @@ ul.chancellorFeaturePost {
     // padding-bottom: calc($spacer * 3);
     padding: calc($spacer * 3);
     // border: 2px solid blue;
-    &:after {
-      content: '';
-      display: block;
-      height: 2px;
-      // border: 2px solid $utorange;
-      width: 16%;
-      width: 8%;
-      margin: 0 80%;
-      margin: 10px;
-      background: $utorange;
-      position: absolute;
-      left: 42%;
-      margin: 3rem 0 2rem 0;
-    }
+    // &:after {
+    //   content: '';
+    //   display: block;
+    //   height: 2px;
+    //   // border: 2px solid $utorange;
+    //   width: 16%;
+    //   width: 8%;
+    //   margin: 0 80%;
+    //   margin: 10px;
+    //   background: $utorange;
+    //   position: absolute;
+    //   left: 42%;
+    //   margin: 3rem 0 2rem 0;
+    // }
     &:last-child {
       &:after {
         content: none;
