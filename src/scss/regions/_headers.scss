@@ -15,12 +15,16 @@
     color: $utsmokey;
     // padding: 0 0 $spacer calc($spacer * 4.1);
     padding: $spacer calc($spacer * 4.1);
-    background-position: center left;
+    background-position: center center;
+    background-size: 3rem;
     text-decoration: none;
     font-weight: $font-weight-bolder;
     font-weight: $font-weight-light;
     line-height: calc($headings-line-height * 1.1);
     position: relative;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 #utk_powert {

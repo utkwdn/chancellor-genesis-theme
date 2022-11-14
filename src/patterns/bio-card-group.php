@@ -1,9 +1,9 @@
 <?php
 /**
- * Title: Bio Cards
- * Slug: utkchancellor/bio-cards
+ * Title: Bio Card Group
+ * Slug: utkchancellor/bio-card-group
  * Categories: utkchancellor-general
- * Viewport Width: 1280
+ * Viewport Width: 1500
  */
 
 ?>

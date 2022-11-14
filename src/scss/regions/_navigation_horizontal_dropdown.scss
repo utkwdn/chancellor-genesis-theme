@@ -23,16 +23,20 @@
 }
 
 .btn-mobileNav {
+  display: flex;
   background-color: transparent;
-  flex-direction: row;
   border: none;
   margin-left: auto;
   display: block;
   justify-content: center;
   align-items: center;
-  display: flex;
-  // border: 1px solid green;
   padding: $spacer;
+
+  @media screen and (min-width: 420px) {
+    flex-direction: row;
+
+    display: flex;
+  }
   @include media-breakpoint-up(lg) {
     display: none;
   }
@@ -41,7 +45,9 @@
 .btn-hamburger {
   transform: scale(1.2);
   fill: $utsmokey;
-  margin-right: calc($spacer * 0.75);
+  @media screen and (min-width: 420px) {
+    margin-right: calc($spacer * 0.75);
+  }
 }
 // .btn-mobileNav .collapse {
 //   nav.nav-primary {
