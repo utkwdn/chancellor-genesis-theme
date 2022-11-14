@@ -49,8 +49,13 @@
 }
 
 .featuredVideo {
+  margin: 0;
+  padding: 0;
+
   .has-white-to-clear-gradient-background {
     transform: scaleX(0.85);
+    transform: scaleX(0.45);
+    // transform: scaleY(0);
     transform-origin: top left;
 
     transition: all 0.2s ease-out;
@@ -66,6 +71,18 @@
 
       transition: all 0.2s ease-out;
     }
+
+    @media screen and (min-width: 2370px) {
+      transform: scaleX(0.9);
+      border: none;
+
+      transition: all 0.2s ease-out;
+    }
+  }
+  .flagshipVideo {
+    margin: 0;
+    padding: 0;
+    height: min-content !important;
   }
 }
 
