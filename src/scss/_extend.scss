@@ -159,6 +159,18 @@ h1.adaOrange {
   clip-path: path('M0,1L.3,.4s1.7,0,1.7,0,0-.2,0-.2h6.4v-.2H0V1Z');
 }
 
+.tnBottom {
+  --notchSize: 130px;
+  clip-path: polygon(
+    0% 0%,
+    100% 0,
+    100% 8px,
+    calc(100% - var(--notchSize)) 100%,
+    var(--notchSize) 100%,
+    0% 100%
+  );
+}
+
 .scaleUp {
   transform: scale(400);
   transform-origin: top left;
