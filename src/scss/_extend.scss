@@ -42,17 +42,18 @@
   }
 }
 
-// .alignwide {
-//   margin-left: -80px;
-//   margin-right: -80px;
-//   @media screen and (min-width: 920px) {
-//     .alignwide {
-//       margin: 32px calc( ( 1500px - 1600px ) / 2 )
-//       max-width: 1600px;
-//       width: 1500px;
-//     }
-//   }
-// }
+// controls the Align-Wide Selection for certain blocks (groups, cover, overlay...)
+.alignwide {
+  margin-left: -80px;
+  margin-right: -80px;
+  @media screen and (min-width: 920px) {
+    .alignwide {
+      margin: 32px calc((1500px - 1700px) / 2);
+      max-width: 1700px;
+      width: 1700px;
+    }
+  }
+}
 
 .wp-block-image {
   &.alignfull {
