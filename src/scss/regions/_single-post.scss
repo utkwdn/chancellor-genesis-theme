@@ -18,6 +18,8 @@
       img.wp-post-image {
         width: 90%;
         @extend .framedOrangeShadow;
+        margin: 0 !important;
+        margin-top: calc($spacer * 2) !important;
         margin-bottom: calc($spacer * 6) !important;
         // @include media-breakpoint-up(xl) {
         //   width: 60%;
