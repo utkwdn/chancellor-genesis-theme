@@ -7,6 +7,8 @@
  */
 
 ?>
+
+
 <!-- wp:heading -->
 <h2>Cabinet Members</h2>
 <!-- /wp:heading -->

@@ -8,7 +8,6 @@
 
 ?>
 
-
 <!-- wp:group {"className":"bioCardContainer"} -->
 <div class="wp-block-group bioCardContainer"><!-- wp:group {"className":"bioCard"} -->
 <div class="wp-block-group bioCard"><!-- wp:group {"className":"bioHeadshot"} -->
