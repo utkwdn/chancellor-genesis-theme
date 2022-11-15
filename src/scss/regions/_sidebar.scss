@@ -2,5 +2,8 @@
   //   border: 1px solid red;
   flex: 2 1 auto;
   align-items: flex-start;
-  padding-top: calc($spacer * 3);
+  margin-top: 0;
+  @include media-breakpoint-up(md) {
+    margin-top: calc($spacer * 3);
+  }
 }

@@ -1,8 +1,21 @@
 // styling blog to be exactly the same as archive
 .archive,
 .blog {
-  .sidebar .widget {
-    margin-top: calc($spacer * 3);
+  .sidebar-primary .widget {
+    margin-top: 0;
+    @include media-breakpoint-up(md) {
+      margin-top: calc($spacer * 3);
+    }
+    &:first-of-type {
+      margin-top: 0;
+
+      @include media-breakpoint-up(md) {
+        margin-top: calc($spacer * 18);
+      }
+    }
+    .widget-title {
+      margin-bottom: $spacer;
+    }
   }
   .content {
     display: flex;
@@ -17,6 +30,9 @@
       flex-basis: 100%;
     }
 
+    .archive-title {
+      margin-top: 0;
+    }
     .post {
       //   box-shadow: 0px 5px 30px 0 #0000001a;
       background-color: $utgray1;
