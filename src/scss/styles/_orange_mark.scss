@@ -1,9 +1,9 @@
 .orange-mark {
   position: relative;
-  padding-top: $spacer*3;
-  margin-top: $spacer*3;
+  padding-top: $spacer * 3;
+  margin-top: $spacer * 3;
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     width: 90px;
@@ -11,12 +11,10 @@
     height: 6px;
     background-color: $utorange;
     top: 0;
-    bottom: auto
+    bottom: auto;
   }
   &.widget-title {
-  padding-top: $spacer;
-  margin-top: $spacer;
+    padding-top: $spacer;
+    margin-top: $spacer;
   }
 }
-
-

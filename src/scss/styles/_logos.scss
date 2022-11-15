@@ -3,7 +3,7 @@
   margin: 0;
   margin-top: auto;
   margin-bottom: auto;
-  @include media-breakpoint-up(md) { 
+  @include media-breakpoint-up(md) {
     width: 250px;
   }
 }

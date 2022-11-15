@@ -1,7 +1,3 @@
-
-
-
-
 .has-orange-background-color {
   @extend .bg-orange;
 }
@@ -33,5 +29,5 @@
   @extend .bg-light;
 }
 .has-background {
-  padding: $spacer*2;
+  padding: $spacer * 2;
 }

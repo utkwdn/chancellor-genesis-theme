@@ -66,6 +66,7 @@ $uttextsmokey: $utsmokeytext;
 $utcoolsmokey: #313e48;
 $utcoolrock: #d9dfe3;
 $utlinkriver: #1a73c5;
+$utlinkhover: #114c81;
 
 //UT Branding Colors Modify
 $utlimestone-d: rgb(213, 211, 205);
@@ -325,7 +326,10 @@ $font-family-code: var(--#{$variable-prefix}font-monospace) !default;
 $font-family-sans-serif: "Gotham A", "Gotham B", "Gotham SSm 4r", "Gotham SSm A",
   "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-size-base: 1.25rem; // Assumes the browser default, typically `16px`
-$font-size-lg: $font-size-base * 1.25 !default;
+
+$font-size-base: 1.1rem; // This is setting base font to 17.6px 
+$font-size-lg: $font-size-base * 1.1;
+$font-size-xlg: $font-size-base * 1.25;
 $font-size-sm: $font-size-base * 0.875 !default;
 
 $font-weight-lighter: lighter !default;
@@ -338,17 +342,19 @@ $font-weight-ultra: 900;
 $font-weight-base: $font-weight-normal !default;
 $line-height-base: 1.5 !default;
 
-$h1-font-size: $font-size-base * 5.2; // 6.6rem
-$h2-font-size: $font-size-base * 3.2; // 4rem
-$h3-font-size: $font-size-base * 2.24; // 2.8rem
-$h4-font-size: $font-size-base * 1.6; // 2rem
-$h5-font-size: $font-size-base * 1.248; // 1.56rem
-$h6-font-size: $font-size-base; // 1.25rem
+$h1-font-size: clamp((calc($font-size-base * 2.24)), 11.5vw, (calc($font-size-base * 3.7224))); //max size is 4.653rem min-size 2.8rem
+$h2-font-size: clamp((calc($font-size-base * 1.647)), 8.4558vw, (calc($font-size-base * 2.7368))); // max size is 3.421rem
+$h3-font-size: clamp((calc($font-size-base * 1.211)), 6.2175vw, (calc($font-size-base * 2.012))); // max size is 2.515rem
+$h4-font-size: clamp((calc($font-size-base * 1)), 4.572vw, (calc($font-size-base *  1.48))); // max size is  1.85rem
+$h5-font-size: clamp((calc($font-size-base * .9)), 3.362vw, (calc($font-size-base *  1.088))); // max size is  1.36rem
+$h6-font-size: clamp((calc($font-size-base * .8)), 2.661vw, (calc($font-size-base *  0.8))); // max size is  1rem
+
+$p-font-size: clamp((calc($font-size-base * .9)), 3.362vw, (calc($font-size-base))); // max size is  1rem
 
 $headings-margin-bottom: calc($spacer / 2) !default;
 $headings-font-family: null !default;
-$headings-font-weight: 700;
-$headings-line-height: .97;
+$headings-font-weight: $font-weight-bolder;
+$headings-line-height: .85;
 $headings-color: null !default;
 
 $display-font-sizes: (
@@ -363,14 +369,11 @@ $display-font-sizes: (
 $display-font-weight: 900 !default;
 $display-line-height: 1 !default;
 
-$lead-font-size: $font-size-base * 1.25 !default;
-$lead-font-weight: 200 !default;
-
 $hr-border-color: rgba($utsmokey, 0.25) !default;
 
 // scss-docs-start type-variables
-$lead-font-size: $font-size-base * 1.25 !default;
-$lead-font-weight: 700;
+$lead-font-size: clamp((calc($font-size-base * 1)), 4.572vw, (calc($font-size-base *  1.48))); // max size is  1.85rem
+$lead-font-weight: $font-weight-light;
 
 $small-font-size: 0.875em !default;
 
@@ -553,9 +556,9 @@ $breadcrumb-item-padding: 0.5rem !default;
 
 $breadcrumb-margin-bottom: 1rem !default;
 
-$breadcrumb-bg: $utgray1 !default;
+$breadcrumb-bg: $white !default;
 $breadcrumb-divider-color: $utorange !default;
-$breadcrumb-active-color: $gray-600 !default;
+$breadcrumb-active-color: $utlinkriver !default;
 //$breadcrumb-divider:                url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik00IC43NTVsMTQuMzc0IDExLjI0NS0xNC4zNzQgMTEuMjE5LjYxOS43ODEgMTUuMzgxLTEyLTE1LjM5MS0xMi0uNjA5Ljc1NXoiLz48L3N2Zz4=) !default; /* quote("/") */
 $breadcrumb-divider: quote("/") !default;
 
@@ -993,3 +996,46 @@ $accordion-icon-transform: rotate(-180deg) !default;
 $accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
 $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
 // scss-docs-end accordion-variables
+
+
+// Modals
+
+// scss-docs-start modal-variables
+$modal-inner-padding:               $spacer;
+
+$modal-title-line-height:           $line-height-base !default;
+$modal-content-bg:                  $white !default;
+$modal-content-color:               null !default;
+$modal-content-box-shadow-xs:       $box-shadow-sm !default;
+
+$modal-footer-margin-between:       .5rem !default;
+
+$modal-dialog-margin:               .5rem !default;
+$modal-dialog-margin-y-sm-up:       1.75rem !default;
+$modal-backdrop-bg:                 $black !default;
+$modal-backdrop-opacity:            .5 !default;
+
+$modal-content-border-width:        0;
+
+$modal-header-border-width:         $modal-content-border-width !default;
+$modal-content-border-radius:       $border-radius-lg !default;
+$modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width) !default;
+
+$modal-content-box-shadow-sm-up:    $box-shadow !default;
+// scss-docs-end modal-variables
+
+// Offcanvas
+
+// scss-docs-start offcanvas-variables
+$offcanvas-padding-y:               $modal-inner-padding !default;
+$offcanvas-padding-x:               $modal-inner-padding !default;
+$offcanvas-horizontal-width:        80vw;
+$offcanvas-vertical-height:         30vh !default;
+$offcanvas-transition-duration:     .3s !default;
+$offcanvas-title-line-height:       $modal-title-line-height !default;
+$offcanvas-bg-color:                white;
+// $offcanvas-color:                   $modal-content-color !default;
+// $offcanvas-box-shadow:              $modal-content-box-shadow-xs !default;
+// $offcanvas-backdrop-bg:             $modal-backdrop-bg !default;
+// $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
+// scss-docs-end offcanvas-variables
