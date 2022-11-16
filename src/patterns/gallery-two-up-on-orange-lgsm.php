@@ -32,3 +32,7 @@
 <!-- /wp:columns --></div>
 <!-- /wp:group --></div></div>
 <!-- /wp:cover -->
+
+<!-- wp:group {"align":"full","backgroundColor":"orange"} -->
+<div class="wp-block-group alignfull has-orange-background-color has-background"></div>
+<!-- /wp:group -->
