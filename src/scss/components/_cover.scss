@@ -8,3 +8,15 @@
 // .wp-block-cover-image {
 //   position: relative;
 // }
+
+.homeParallaxMobileAlign {
+  /* fix alignment of home parallax image on chancellor site mobile */
+  .wp-block-cover__image-background {
+    @media screen and (max-width: 800px) {
+      background-position: 80% !important;
+    }
+    @media (min-width: 801px) and (max-width: 1200px) {
+      background-position: 70% !important;
+    }
+  }
+}
