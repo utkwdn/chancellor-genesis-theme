@@ -191,7 +191,11 @@
 }
 .framedOrangeShadow {
   filter: drop-shadow(1.25rem 1.25rem 0px $utorange);
+  @extend .hardware-excelerated;
   margin: 1rem;
+  .wp-element-caption {
+    filter: none !important;
+  }
 }
 
 .framedThin {
