@@ -235,6 +235,7 @@
   border-radius: 0 0 30px 0;
   // border-radius is being overwritten below. We might use this instead of the angle in WDS?
   // height: 100%;   // breaks equal height cards. no good.
+  @extend .card-flexGapFix;
 }
 .nameCard {
   padding: 2rem;
@@ -383,6 +384,7 @@
   // border-radius: 0 0 30px 0;
   // border-radius is being overwritten with clip corner – might use rounded in WDS instead?
   // height: 100%; // breaks equal height cards. no good.
+  @extend .card-flexGapFix;
   @extend .clipCorner-br-container-sm;
   @media screen and (min-width: 900px) {
     flex-basis: 46%;

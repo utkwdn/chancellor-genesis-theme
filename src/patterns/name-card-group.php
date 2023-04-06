@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: Profile Card Group
- * Slug: utkchancellor/profile-card-group
+ * Title: Name Card Group
+ * Slug: utkchancellor/name-card-group
  * Categories: utkchancellor-general
  * Viewport Width: 1500 
  */
